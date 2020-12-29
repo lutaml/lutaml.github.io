@@ -1,0 +1,96 @@
+title: LutaML in XML
+redirectFrom: []
+contents:
+  doc:
+    type: doc
+    content:
+      - type: paragraph
+        content:
+          - type: text
+            text: >-
+              LutaML allows encoding of scientific units of measure and
+              quantities into XML and will validate XML documents that use
+              LutaML. Initial development of this schema was done at NIST, but
+              completion of the development process should include input from
+              the international scientific and engineering community. Towards
+              this end, we are initiating an OASIS Technical Committee to
+              address any needed changes in the schema and publish a final
+              recommendation.
+      - type: paragraph
+        content:
+          - type: text
+            text: 'Types of Units:'
+      - type: bullet_list
+        content:
+          - type: list_item
+            content:
+              - type: paragraph
+                content:
+                  - type: text
+                    text: >-
+                      SI (International System of Units) base and special
+                      derived units (e.g., meter, second, joule, volt)
+          - type: list_item
+            content:
+              - type: paragraph
+                content:
+                  - type: text
+                    text: >-
+                      SI derived units (e.g., square meter, meter per second, mm
+                      • s-2)
+          - type: list_item
+            content:
+              - type: paragraph
+                content:
+                  - type: text
+                    text: 'Non-SI units (e.g., minute, ångström, and inch)'
+      - type: paragraph
+        content:
+          - type: text
+            text: >-
+              We anticipate that LutaML will be used by the developers of other
+              markup languages to address the needs of specific communities
+              (e.g. mathematics, chemistry, materials science, etc.). The
+              LutaML schema is not intended to be a standalone schema, but
+              rather to be used in combination with other specific schemas
+              through the appropriate use of namespaces.
+      - type: section
+        attrs:
+          id: example-lutaml-animl
+        content:
+          - type: section_header
+            content:
+              - type: text
+                text: 'Example: LutaML within AniML'
+          - type: paragraph
+            content:
+              - type: text
+                text: >-
+                  LutaML used within another ML (AnIML - the Analytical
+                  Information Markup Language) through the proper use of
+                  namespaces
+      - type: paragraph
+      - type: code_block
+        content:
+          - type: text
+            text: |-
+              <?xml version=”1.0”?>
+              <AnIML xmlns:animlcore=”http://animl.sourceforge.net/CORE”
+               xmlns:lutaml=”http://lutaml.nist.gov/2005”
+               xmlns:xsi=”http://www.w3.org/2001/XMLSchema-instance”
+               xsi:schemaLocation=”http://animl.sourceforge.net/CORE 
+                http://animl.sourceforge.net/schema/animl-core.xsd”
+               version=”1.0”>
+              ...
+                <animlcore:Parameter name=”SampleAmount”>
+                  <float32>12.2</float32>
+                  <lutaml:lutaml>
+                    <lutaml:units>
+                      <lutaml:unit numericID=”NISTu27” symbolicID=”g”>
+                        <lutaml:system name=”SI” type=”SI_multiples_and_sub”/>
+                        <lutaml:name lang=”en-US”>gram</lutaml:name>
+                      </lutaml:unit>
+                    </lutaml:units>
+                  </lutaml:lutaml>
+              ...
+              </AnIML>

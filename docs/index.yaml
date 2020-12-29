@@ -1,0 +1,106 @@
+title: LutaML - Data Modeling Language
+redirectFrom: []
+media: []
+summary:
+  doc:
+    type: doc
+    content:
+      - type: paragraph
+        content:
+          - type: text
+            text: >-
+              LutaML is the authoritative mechanism for encoding scientific
+              units of measure.
+contents:
+  doc:
+    type: doc
+    content:
+      - type: admonition
+        attrs:
+          type: note
+        content:
+          - type: paragraph
+            content:
+              - type: text
+                text: >-
+                  LutaML is under active development and its documentation may
+                  change frequently.
+      - type: paragraph
+        content:
+          - type: text
+            text: 'LutaML consists of two main parts:'
+      - type: bullet_list
+        content:
+          - type: list_item
+            content:
+              - type: paragraph
+                content:
+                  - type: text
+                    text: >-
+                      LutaML XML, a way to encode scientific units of measure,
+                      such as SI units, their derivatives and non-SI units;
+          - type: list_item
+            content:
+              - type: paragraph
+                content:
+                  - type: text
+                    text: >-
+                      UnitsDB (Units Database), a database containing extensive
+                      information on units, prefixes, quantities and dimensions.
+      - type: section
+        attrs:
+          id: landing-vision
+        content:
+          - type: section_header
+            content:
+              - type: text
+                text: Vision
+          - type: paragraph
+      - type: bullet_list
+        content:
+          - type: list_item
+            content:
+              - type: paragraph
+                content:
+                  - type: text
+                    text: >-
+                      XML schema(s) available for incorporating LutaML into XML
+                      documents for encoding scientific units of measure.
+      - type: bullet_list
+        content:
+          - type: list_item
+            content:
+              - type: paragraph
+                content:
+                  - type: text
+                    text: >-
+                      Extensive XML repository containing schemas and
+                      information on units, quantities, prefixes.
+      - type: bullet_list
+        content:
+          - type: list_item
+            content:
+              - type: paragraph
+                content:
+                  - type: text
+                    text: >-
+                      Design of schemas and repository to facilitate unit
+                      information processing:
+      - type: bullet_list
+        content:
+          - type: list_item
+            content:
+              - type: paragraph
+                content:
+                  - type: text
+                    text: >-
+                      validating documents for self-consistent usage of units,
+                      quantities, and prefixes
+      - type: bullet_list
+        content:
+          - type: list_item
+            content:
+              - type: paragraph
+                content:
+                  - type: text
+                    text: unit conversion and manipulation

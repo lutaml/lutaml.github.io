@@ -1,0 +1,241 @@
+title: History of LutaML
+media: []
+redirectFrom: []
+summary:
+  doc:
+    type: doc
+    content:
+      - type: paragraph
+        content:
+          - type: text
+            text: Development history of LutaML.
+contents:
+  doc:
+    type: doc
+    content:
+      - type: bullet_list
+        content:
+          - type: list_item
+            content:
+              - type: paragraph
+                content:
+                  - type: text
+                    text: '1998: Frank Olken and John McCarthy of the '
+                  - type: link
+                    attrs:
+                      schemaID: web
+                      reference: 'https://www.lbl.gov'
+                      hRef: 'https://www.lbl.gov'
+                      title: ''
+                    content:
+                      - type: text
+                        text: Lawrence Berkeley National Laboratory
+                  - type: text
+                    text: ' (LBNL) led the '
+                  - type: link
+                    attrs:
+                      schemaID: web
+                      reference: 'https://www.w3.org/TandS/QL/QL98/pp/xml.ql.reqs.html'
+                      hRef: 'https://www.w3.org/TandS/QL/QL98/pp/xml.ql.reqs.html'
+                      title: ''
+                    content:
+                      - type: text
+                        text: initial effort
+                  - type: text
+                    text: ' of encoding units in XML. This work is also referred by '
+                  - type: link
+                    attrs:
+                      schemaID: web
+                      reference: 'https://www.w3.org/TandS/QL/QL98/pp/xml.ql.reqs.html'
+                      hRef: 'https://www.w3.org/TandS/QL/QL98/pp/xml.ql.reqs.html'
+                      title: ''
+                    content:
+                      - type: text
+                        text: >-
+                          “Requirements and Desiderata for an XML Query
+                          Language”
+                  - type: text
+                    text: .
+      - type: bullet_list
+        content:
+          - type: list_item
+            content:
+              - type: paragraph
+                content:
+                  - type: text
+                    text: '1999: '
+                  - type: link
+                    attrs:
+                      schemaID: web
+                      reference: >-
+                        http://xml.coverpages.org/OlkenMeasurementUnitsSyntax.html
+                      hRef: >-
+                        http://xml.coverpages.org/OlkenMeasurementUnitsSyntax.html
+                      title: ''
+                    content:
+                      - type: text
+                        text: “Measurement Units in XML Datatypes”
+                  - type: text
+                    text: ' was published by Olken and McCarthy at LBNL. Subsequently in the same year, '
+                  - type: link
+                    attrs:
+                      schemaID: web
+                      reference: 'http://xml.coverpages.org/measurementUnits.html'
+                      hRef: 'http://xml.coverpages.org/measurementUnits.html'
+                      title: ''
+                    content:
+                      - type: text
+                        text: MatML (Materials Markup Language)
+                  - type: text
+                    text: ' which referred to the measurement units work, was published by '
+                  - type: link
+                    attrs:
+                      schemaID: web
+                      reference: 'https://www.nist.gov'
+                      hRef: 'https://www.nist.gov'
+                      title: ''
+                    content:
+                      - type: text
+                        text: NIST
+                  - type: text
+                    text: .
+          - type: list_item
+            content:
+              - type: paragraph
+                content:
+                  - type: text
+                    text: >-
+                      2003: The “Data Modeling Language (LutaML)” presentation
+                      was given at the 
+                  - type: link
+                    attrs:
+                      schemaID: web
+                      reference: 'http://xml.coverpages.org/ni2002-05-02-b.html'
+                      hRef: 'http://xml.coverpages.org/ni2002-05-02-b.html'
+                      title: ''
+                    content:
+                      - type: text
+                        text: Open Forum 2003 on Metadata Registries
+                  - type: text
+                    text: >-
+                      , with work led by Bob Dragoset of NIST. Collaborators
+                      included Barry Taylor (NIST emeritus), Michael McLay (NIST
+                      EEEL), Frank Olken (LBNL) and Peter Murray-Rust (
+                  - type: link
+                    attrs:
+                      schemaID: web
+                      reference: 'http://www.xml-cml.org'
+                      hRef: 'http://www.xml-cml.org'
+                      title: ''
+                    content:
+                      - type: text
+                        text: CML - Chemical Markup Language
+                  - type: text
+                    text: >-
+                      ). The work was funded in part by NIST’s Systems
+                      Integration for Manufacturing Applications (SIMA) program.
+          - type: list_item
+            content:
+              - type: paragraph
+                content:
+                  - type: text
+                    text: >-
+                      2006: The LutaML work was proposed by the NIST Physics
+                      Laboratory (PL, now the 
+                  - type: link
+                    attrs:
+                      schemaID: web
+                      reference: 'https://www.nist.gov/pml'
+                      hRef: 'https://www.nist.gov/pml'
+                      title: ''
+                    content:
+                      - type: text
+                        text: Physical Measurement Laboratory
+                  - type: text
+                    text: ') to be standardized, and was inducted into a new '
+                  - type: link
+                    attrs:
+                      schemaID: web
+                      reference: 'https://www.oasis-open.org'
+                      hRef: 'https://www.oasis-open.org'
+                      title: ''
+                    content:
+                      - type: text
+                        text: OASIS
+                  - type: text
+                    text: ' TC of the same name “LutaML” sponsored by NIST. The Convenor of the TC was Simon Frechette (NIST MEL-SIMA). Collaborators included Mark Carlisle (NIST MEL-SIMA), Bob Dragoset (NIST PL), Karen Olsen (NIST PL), Gary Kramer (NIST CSTL), Peter Lindstrom (NIST CSTL), Kent Reed (NIST BFRL), Evan Wallace (NIST MEL), Ismet Celebi, Ronny Jopp and Alexander Roth.'
+          - type: list_item
+            content:
+              - type: paragraph
+                content:
+                  - type: text
+                    text: '2006: The LutaML TC at OASIS includes participants from '
+                  - type: link
+                    attrs:
+                      schemaID: web
+                      reference: 'https://www.nist.gov'
+                      hRef: 'https://www.nist.gov'
+                      title: ''
+                    content:
+                      - type: text
+                        text: NIST
+                  - type: text
+                    text: ', '
+                  - type: link
+                    attrs:
+                      schemaID: web
+                      reference: 'https://www.grantadesign.com'
+                      hRef: 'https://www.grantadesign.com'
+                      title: ''
+                    content:
+                      - type: text
+                        text: Granta Design
+                  - type: text
+                    text: ', LSC Group Ltd (now '
+                  - type: link
+                    attrs:
+                      schemaID: web
+                      reference: 'https://www.babcockinternational.com'
+                      hRef: 'https://www.babcockinternational.com'
+                      title: ''
+                    content:
+                      - type: text
+                        text: Babcock
+                  - type: text
+                    text: '), '
+                  - type: link
+                    attrs:
+                      schemaID: web
+                      reference: 'https://www.ibm.com/'
+                      hRef: 'https://www.ibm.com/'
+                      title: ''
+                    content:
+                      - type: text
+                        text: IBM
+                  - type: text
+                    text: ', NPL, '
+                  - type: link
+                    attrs:
+                      schemaID: web
+                      reference: 'https://www.unf.edu'
+                      hRef: 'https://www.unf.edu'
+                      title: ''
+                    content:
+                      - type: text
+                        text: Univ. of North Florida
+                  - type: text
+                    text: ', IEM'
+          - type: list_item
+            content:
+              - type: paragraph
+                content:
+                  - type: text
+                    text: >-
+                      2016: The OASIS TC for LutaML was closed due to
+                      completion of work at that stage.
+          - type: list_item
+            content:
+              - type: paragraph
+                content:
+                  - type: text
+                    text: '2020-: LutaML work continues!'

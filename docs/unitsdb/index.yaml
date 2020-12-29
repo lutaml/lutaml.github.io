@@ -1,0 +1,51 @@
+title: UnitsDB - the Units Database
+media: []
+redirectFrom: []
+contents:
+  doc:
+    type: doc
+    content:
+      - type: paragraph
+        content:
+          - type: text
+            text: >-
+              A database is under development to contain detailed units and
+              dimensionality information for an extensive number of SI units and
+              common, non-SI units. The database includes information needed to
+              reference units in an XML document, and specifically includes:
+      - type: bullet_list
+        content:
+          - type: list_item
+            content:
+              - type: paragraph
+                content:
+                  - type: text
+                    text: Unique identifiers
+          - type: list_item
+            content:
+              - type: paragraph
+                content:
+                  - type: text
+                    text: Unit symbols
+          - type: list_item
+            content:
+              - type: paragraph
+                content:
+                  - type: text
+                    text: Language-specific unit names
+          - type: list_item
+            content:
+              - type: paragraph
+                content:
+                  - type: text
+                    text: >-
+                      Representations in terms of other units (including
+                      conversion factors)
+      - type: paragraph
+        content:
+          - type: text
+            text: >-
+              In addition to scientific units, the database will include
+              information about common quantities (e.g., length, mass),
+              including the dimension of quantities with respect to the 7 base
+              quantities.
