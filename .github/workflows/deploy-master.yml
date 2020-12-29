@@ -1,8 +1,5 @@
 
 name: deploy-master
-environment:
-  name: production
-  url: https://www.lutaml.org
 
 on:
   schedule:
@@ -16,6 +13,9 @@ jobs:
   build:
     name: Build site
     runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://www.lutaml.org
     steps:
       - name: Use Node
         uses: actions/setup-node@v1
