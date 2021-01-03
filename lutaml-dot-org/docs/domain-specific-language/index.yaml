@@ -1,3 +1,11 @@
 title: Domain specific language
 media: []
 redirectFrom: []
+summary:
+  doc:
+    type: doc
+    content:
+      - type: paragraph
+        content:
+          - type: text
+            text: Lutaml domain specific language syntax
