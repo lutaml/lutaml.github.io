@@ -29,7 +29,10 @@ contents:
           - type: paragraph
             content:
               - type: text
-                text: '`diagram` is a root element for each diagram.'
+                text: >-
+                  `diagram` is a root element for each diagram. The equivalent
+                  in plantuml will be @startuml..@enduml tags, or graph
+                  graphname {} in dot language. Example:
           - type: paragraph
             content:
               - type: text
@@ -40,6 +43,7 @@ contents:
                 text: |
                   diagram MyView {
                     import Relationship, Element
+                    title "My diagram"
                     fontname "Helvetica"
                   }
           - type: paragraph
@@ -64,6 +68,12 @@ contents:
                         text: >-
                           `fontname` - render option, use described font for
                           diagram render
+              - type: list_item
+                content:
+                  - type: paragraph
+                    content:
+                      - type: text
+                        text: '`title` - name of the diagram.'
       - type: section
         attrs:
           id: untitled-section
