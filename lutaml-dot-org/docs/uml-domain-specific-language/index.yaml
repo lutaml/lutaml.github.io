@@ -405,9 +405,18 @@ contents:
           - type: code_block
             content:
               - type: text
-                text: |+
+                text: |-
                   }
 
+
+
+                  class Figure {
+                    + radius {
+                      definition {
+                        Radius of the Figure
+                      }
+                    }
+                  }
       - type: code_block
       - type: paragraph
       - type: code_block
