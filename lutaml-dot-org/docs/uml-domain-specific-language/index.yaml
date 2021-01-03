@@ -64,5 +64,89 @@ contents:
                         text: >-
                           `fontname` - render option, use described font for
                           diagram render
-      - type: paragraph
-      - type: paragraph
+      - type: section
+        attrs:
+          id: untitled-section
+        content:
+          - type: section_header
+            content:
+              - type: text
+                text: DataTypes
+          - type: paragraph
+            content:
+              - type: text
+                text: >-
+                  Lutaml supports 3 types of data_types: `data_type`,
+                  `primitive` and `enum`. Example of data types declaration:
+          - type: code_block
+            content:
+              - type: text
+                text: |+
+
+                  diagram MyView {
+                    enum MyEnum {}
+
+                    enum AddressClassProfile {
+                      +addressClassProfile: CharacterString
+                    }
+
+                    data_type "Banking Information" {
+                      "art code"
+                      "CCT Number"
+                    }
+
+                    primitive Integer
+
+                    enum Profile {
+                      imlicistAttributeProfile: CharacterString
+                      +attributeProfile: CharacterString
+                      -privateAttributeProfile: CharacterString
+                      ~friendlyAttributeProfile: CharacterString
+                      #protectedAttributeProfile: CharacterString
+                    }
+                  }
+
+      - type: section
+        attrs:
+          id: untitled-section
+        content:
+          - type: section_header
+            content:
+              - type: text
+                text: Associations
+          - type: paragraph
+            content:
+              - type: text
+                text: >-
+                  Lutaml supports different types of associations:
+                  `composition`, `aggregation`, `inheritance`, `direct`. Example
+                  of declaration:
+          - type: code_block
+          - type: code_block
+            content:
+              - type: text
+                text: 'association name {'
+          - type: code_block
+            content:
+              - type: text
+                text: ' owned_type association|composition|aggregation|generalization|uses'
+          - type: code_block
+            content:
+              - type: text
+                text: ' member_type association|composition|aggregation|generalization|uses'
+          - type: code_block
+            content:
+              - type: text
+                text: ' owned association_name[#attribute_name] [{property_string}][cardinality]'
+          - type: code_block
+            content:
+              - type: text
+                text: ' member association_name[#attribute_name] [{property_string}][cardinality]'
+          - type: code_block
+            content:
+              - type: text
+                text: |+
+                  }
+
+      - type: code_block
+      - type: code_block
