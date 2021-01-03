@@ -16,10 +16,7 @@ contents:
       - type: paragraph
         content:
           - type: text
-            text: >-
-              Lutaml supports special abstract language for describing uml
-              entities and relations. The syntax is quite simple and originated
-              from plantuml/dot languages.
+            text: ' Lutaml supports special abstract language for describing uml entities and relations. The syntax is quite simple and originated from plantuml/dot languages.'
       - type: paragraph
       - type: section
         attrs:
@@ -43,8 +40,6 @@ contents:
                 text: |
                   diagram MyView {
                     import Relationship, Element
-                    render_option typed_as_associations
-                    file "my_view.png"
                     fontname "Helvetica"
                   }
           - type: paragraph
@@ -58,4 +53,16 @@ contents:
                   - type: paragraph
                     content:
                       - type: text
-                        text: '`import` - directive for including other'
+                        text: >-
+                          `import` - directive for including other .lutaml files
+                          into the current document.
+              - type: list_item
+                content:
+                  - type: paragraph
+                    content:
+                      - type: text
+                        text: >-
+                          `fontname` - render option, use described font for
+                          diagram render
+      - type: paragraph
+      - type: paragraph
