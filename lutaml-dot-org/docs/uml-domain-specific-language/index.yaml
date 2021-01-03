@@ -209,7 +209,7 @@ contents:
           - type: code_block
             content:
               - type: text
-                text: |+
+                text: |-
                   # Simple inheritance
                   association name {  
                     owned A
@@ -224,5 +224,11 @@ contents:
                     member B#attributeProfile [0..*]
                   }
 
+                  # Uses
+                  association AssociatingTypeAndAssociation {
+                    type uses
+                    from Association#+association {subsets relationship}[*]
+                    to Type#+/endType {readOnly, subsets relatedElement} [1..*]
+                  }
       - type: code_block
       - type: code_block
