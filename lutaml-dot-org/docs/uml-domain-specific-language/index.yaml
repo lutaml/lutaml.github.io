@@ -245,6 +245,8 @@ contents:
           - type: paragraph
             content:
               - type: text
+                marks:
+                  - type: code
                 text: >-
                   [visibility][/][attribute] name [:type][multiplicity][=initial
                   value][{attribute body}]     
