@@ -8,4 +8,4 @@ summary:
       - type: paragraph
         content:
           - type: text
-            text: Lutaml domain specific language syntax
+            text: Lutaml’ uml domain specific language syntax
