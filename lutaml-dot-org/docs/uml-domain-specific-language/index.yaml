@@ -195,19 +195,33 @@ contents:
           - type: code_block
             content:
               - type: text
+                text: |-
+                  class A {
+                    addressClassProfile
+                  }
+          - type: code_block
+            content:
+              - type: text
+                text: |-
+                  class B {
+                    attributeProfile
+                  }
+          - type: code_block
+            content:
+              - type: text
                 text: |+
                   # Simple inheritance
                   association name {  
-                    owned association_name[#attribute_name] [{property_string}][cardinality]
-                    member association_name[#attribute_name] [{property_string}][cardinality]
+                    owned A
+                    member B
                   }
 
                   # Aggregation
                   association BidirectionalAsscoiation {
                   owner_type aggregation
                     member_type direct
-                    owner AddressClassProfile#addressClassProfile
-                    member AttributeProfile#attributeProfile [0..*]
+                    owner A#addressClassProfile
+                    member B#attributeProfile [0..*]
                   }
 
       - type: code_block
