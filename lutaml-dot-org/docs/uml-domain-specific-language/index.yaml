@@ -211,12 +211,16 @@ contents:
               - type: text
                 text: |-
                   # Simple inheritance
+                  # PlantUML equivalent:
+                  # B <|-- A
                   association name {  
                     owned A
                     member B
                   }
 
                   # Aggregation
+                  # PlantUML equivalent:
+                  # B <|-- A
                   association BidirectionalAsscoiation {
                   owner_type aggregation
                     member_type direct
