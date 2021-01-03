@@ -229,8 +229,10 @@ contents:
                   }
 
                   # Uses
+                  # PlantUML equivalent:
+                  # B *- A
                   association AssociatingTypeAndAssociation {
-                    type uses
+                    member_type uses
                     from Association#+association {subsets relationship}[*]
                     to Type#+/endType {readOnly, subsets relatedElement} [1..*]
                   }
