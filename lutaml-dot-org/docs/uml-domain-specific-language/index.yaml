@@ -9,3 +9,53 @@ summary:
         content:
           - type: text
             text: Lutaml’ uml domain specific language syntax
+contents:
+  doc:
+    type: doc
+    content:
+      - type: paragraph
+        content:
+          - type: text
+            text: >-
+              Lutaml supports special abstract language for describing uml
+              entities and relations. The syntax is quite simple and originated
+              from plantuml/dot languages.
+      - type: paragraph
+      - type: section
+        attrs:
+          id: untitled-section
+        content:
+          - type: section_header
+            content:
+              - type: text
+                text: '`diagram` syntax'
+          - type: paragraph
+            content:
+              - type: text
+                text: '`diagram` is a root element for each diagram.'
+          - type: paragraph
+            content:
+              - type: text
+                text: '   '
+          - type: code_block
+            content:
+              - type: text
+                text: |
+                  diagram MyView {
+                    import Relationship, Element
+                    render_option typed_as_associations
+                    file "my_view.png"
+                    fontname "Helvetica"
+                  }
+          - type: paragraph
+            content:
+              - type: text
+                text: 'Where:'
+          - type: bullet_list
+            content:
+              - type: list_item
+                content:
+                  - type: paragraph
+                    content:
+                      - type: text
+                        text: '`import` - directive for including other'
