@@ -102,18 +102,9 @@ contents:
 
                     data_type "Banking Information" {
                       "art code"
-                      "CCT Number"
                     }
 
                     primitive Integer
-
-                    enum Profile {
-                      imlicistAttributeProfile: CharacterString
-                      +attributeProfile: CharacterString
-                      -privateAttributeProfile: CharacterString
-                      ~friendlyAttributeProfile: CharacterString
-                      #protectedAttributeProfile: CharacterString
-                    }
                   }
 
       - type: section
