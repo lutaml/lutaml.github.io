@@ -120,8 +120,9 @@ contents:
               - type: text
                 text: >-
                   Lutaml supports different types of associations:
-                  `composition`, `aggregation`, `inheritance`, `direct`. Example
-                  of declaration:
+                  `composition`, `aggregation`, `generalization`, `inheritance`,
+                  `direct`. Lutaml uses association blocks in order to declare
+                  associations. Syntax:
           - type: code_block
           - type: code_block
             content:
@@ -146,7 +147,67 @@ contents:
           - type: code_block
             content:
               - type: text
+                text: '}'
+          - type: paragraph
+          - type: paragraph
+            content:
+              - type: text
+                text: 'where:'
+          - type: bullet_list
+            content:
+              - type: list_item
+                content:
+                  - type: paragraph
+                    content:
+                      - type: text
+                        text: ' `owned_type` - optional, use to define bidirectional association(association|composition|aggregation|generalization|uses)'
+              - type: list_item
+                content:
+                  - type: paragraph
+                    content:
+                      - type: text
+                        text: >-
+                          `member_type` - association
+                          type(association|composition|aggregation|generalization|uses)
+              - type: list_item
+                content:
+                  - type: paragraph
+                    content:
+                      - type: text
+                        text: >-
+                          `owned|member` - end of association, use
+                          `\#attribute_name` to set a role name
+              - type: list_item
+                content:
+                  - type: paragraph
+                    content:
+                      - type: text
+                        text: >-
+                          `property_string` - property string for attibutes
+                          associations
+              - type: list_item
+                content:
+                  - type: paragraph
+                    content:
+                      - type: text
+                        text: '`cardinality` - examples: ''1..*'', ''*'''
+          - type: paragraph
+          - type: code_block
+            content:
+              - type: text
                 text: |+
+                  # Simple inheritance
+                  association name {  
+                    owned association_name[#attribute_name] [{property_string}][cardinality]
+                    member association_name[#attribute_name] [{property_string}][cardinality]
+                  }
+
+                  # Aggregation
+                  association BidirectionalAsscoiation {
+                  owner_type aggregation
+                    member_type direct
+                    owner AddressClassProfile#addressClassProfile
+                    member AttributeProfile#attributeProfile [0..*]
                   }
 
       - type: code_block
