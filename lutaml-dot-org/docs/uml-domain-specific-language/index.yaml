@@ -402,21 +402,60 @@ contents:
             content:
               - type: text
                 text: ' # length'
-          - type: code_block
+          - type: paragraph
             content:
               - type: text
-                text: |-
-                  }
-
-
-
-                  class Figure {
-                    + radius {
-                      definition {
-                        Radius of the Figure
-                      }
-                    }
-                  }
+                text: '}  '
+          - type: paragraph
+          - type: paragraph
+            content:
+              - type: text
+                text: >-
+                  Also there can be used `definition` attribute in order to add
+                  annotations to attribute
+          - type: paragraph
+          - type: paragraph
+            content:
+              - type: text
+                marks:
+                  - type: code
+                text: 'class Figure {   '
+          - type: paragraph
+            content:
+              - type: text
+                marks:
+                  - type: code
+                text: '  + radius {     '
+          - type: paragraph
+            content:
+              - type: text
+                marks:
+                  - type: code
+                text: '    definition {       '
+          - type: paragraph
+            content:
+              - type: text
+                marks:
+                  - type: code
+                text: '      Radius of the Figure     '
+          - type: paragraph
+            content:
+              - type: text
+                marks:
+                  - type: code
+                text: '    }   '
+          - type: paragraph
+            content:
+              - type: text
+                marks:
+                  - type: code
+                text: '  } '
+          - type: paragraph
+            content:
+              - type: text
+                marks:
+                  - type: code
+                text: '}'
       - type: code_block
       - type: paragraph
       - type: code_block
