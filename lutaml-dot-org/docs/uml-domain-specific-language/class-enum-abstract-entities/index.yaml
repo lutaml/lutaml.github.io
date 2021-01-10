@@ -1,3 +1,34 @@
 title: Class/enum/abstract entities
 media: []
 redirectFrom: []
+contents:
+  doc:
+    type: doc
+    content:
+      - type: section
+        attrs:
+          id: untitled-section
+        content:
+          - type: section_header
+            content:
+              - type: text
+                text: Classes entities
+          - type: paragraph
+            content:
+              - type: text
+                text: 'in lutaml dsl class is defined with keyword `class`:'
+          - type: code_block
+            content:
+              - type: text
+                text: |+
+                  class Pet {}
+
+          - type: section
+            attrs:
+              id: untitled-section
+            content:
+              - type: section_header
+                content:
+                  - type: text
+                    text: Class attributes
+              - type: paragraph
