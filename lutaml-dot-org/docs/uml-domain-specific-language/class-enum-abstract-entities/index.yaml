@@ -223,4 +223,29 @@ contents:
               - type: text
                 text: Data_type entities
           - type: paragraph
-      - type: paragraph
+            content:
+              - type: text
+                text: 'Data types are defined with `data_type` keyword:'
+          - type: code_block
+            content:
+              - type: text
+                text: |-
+                  data_type "Banking Information" {
+                    "art code"
+                  }
+      - type: section
+        attrs:
+          id: untitled-section
+        content:
+          - type: section_header
+            content:
+              - type: text
+                text: Primitive entities
+          - type: paragraph
+            content:
+              - type: text
+                text: 'Primitive entities can be defined with `primitive` keyword:'
+          - type: code_block
+            content:
+              - type: text
+                text: primitive Integer
