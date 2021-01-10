@@ -1,3 +1,57 @@
 title: Associations
 media: []
 redirectFrom: []
+contents:
+  doc:
+    type: doc
+    content:
+      - type: paragraph
+        content:
+          - type: text
+            text: >-
+              Lutaml supports different types of associations: `composition`,
+              `aggregation`, `generalization`, `inheritance`, `direct`. Lutaml
+              uses association blocks in order to declare associations. Syntax:
+      - type: paragraph
+      - type: code_block
+        content:
+          - type: text
+            text: |-
+              association name {
+               owned_type association|composition|aggregation|generalization|uses
+
+               member_type association|composition|aggregation|generalization|uses
+
+               owned association_name[#attribute_name] [{property_string}][cardinality]
+
+               member association_name[#attribute_name] [{property_string}][cardinality]
+              }
+      - type: paragraph
+      - type: paragraph
+        content:
+          - type: text
+            text: 'where:'
+      - type: paragraph
+        content:
+          - type: text
+            text: ' `owned_type` - optional, use to define bidirectional association(association|composition|aggregation|generalization|uses)'
+      - type: paragraph
+        content:
+          - type: text
+            text: >-
+              `member_type` - association
+              type(association|composition|aggregation|generalization|uses)
+      - type: paragraph
+        content:
+          - type: text
+            text: >-
+              `owned|member` - end of association, use `\#attribute_name` to set
+              a role name
+      - type: paragraph
+        content:
+          - type: text
+            text: '`property_string` - property string for attibutes associations'
+      - type: paragraph
+        content:
+          - type: text
+            text: '`cardinality` - examples: ''1..*'', ''*'''
