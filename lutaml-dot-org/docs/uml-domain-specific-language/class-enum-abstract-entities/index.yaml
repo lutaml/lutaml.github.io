@@ -25,7 +25,7 @@ contents:
 
           - type: section
             attrs:
-              id: untitled-section
+              id: class-attributes
             content:
               - type: section_header
                 content:
@@ -170,7 +170,6 @@ contents:
                     text: >-
                       Also there can be used `definition` attribute in order to
                       add annotations to attribute
-              - type: paragraph
               - type: code_block
                 content:
                   - type: text
@@ -182,3 +181,14 @@ contents:
                           }   
                         } 
                       }
+          - type: paragraph
+      - type: section
+        attrs:
+          id: untitled-section
+        content:
+          - type: section_header
+            content:
+              - type: text
+                text: Enum entities
+          - type: paragraph
+      - type: paragraph
