@@ -20,9 +20,8 @@ contents:
           - type: code_block
             content:
               - type: text
-                text: |+
+                text: |
                   class Pet {}
-
           - type: section
             attrs:
               id: class-attributes
@@ -191,4 +190,27 @@ contents:
               - type: text
                 text: Enum entities
           - type: paragraph
+            content:
+              - type: text
+                text: 'Enumerators entities can be defined with `enum` keyword:'
+          - type: code_block
+            content:
+              - type: text
+                text: 'enum A {}  '
+          - type: paragraph
+            content:
+              - type: text
+                text: 'Enum supports the same attribute` notation as '
+              - type: link
+                attrs:
+                  schemaID: urn
+                  reference: '#class-attributes'
+                  hRef: ''
+                  title: ''
+                content:
+                  - type: text
+                    text: class
+              - type: text
+                text: ' '
+      - type: paragraph
       - type: paragraph
