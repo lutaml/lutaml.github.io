@@ -32,3 +32,181 @@ contents:
                   - type: text
                     text: Class attributes
               - type: paragraph
+                content:
+                  - type: text
+                    text: 'Full syntax:'
+              - type: code_block
+                content:
+                  - type: text
+                    text: >-
+                      [visibility][/][attribute] name
+                      [:type][multiplicity][=initial value][{attribute
+                      body}]     
+              - type: paragraph
+                content:
+                  - type: text
+                    text: 'where:'
+              - type: paragraph
+                content:
+                  - type: text
+                    text: >-
+                      `visibility` can be equal to `-` - private, `+` - public,
+                      `#` - protected, `~` - friendly
+              - type: paragraph
+                content:
+                  - type: text
+                    text: '`attribute` - attrbute keyword'
+              - type: paragraph
+                content:
+                  - type: text
+                    text: '`/` - symbolizes a derived attribute.'
+              - type: paragraph
+                content:
+                  - type: text
+                    text: >-
+                      `multiplicity` - Multiplicity is in square brackets (e.g.
+                      [1..*]).
+              - type: paragraph
+                content:
+                  - type: text
+                    text: >-
+                      `initial value` - Default value specifies the initial
+                      value of the attribute.
+              - type: paragraph
+                content:
+                  - type: text
+                    text: >-
+                      `{attribute body}` - Body of attribute, additional
+                      properties for attribute
+              - type: paragraph
+              - type: paragraph
+                content:
+                  - type: text
+                    text: >-
+                      One can use explicit or implicit syntax for attribute
+                      definition
+              - type: paragraph
+                content:
+                  - type: text
+                    text: |
+                      explicit syntax:  
+              - type: code_block
+                content:
+                  - type: text
+                    text: |
+                      class A {
+                        attribute my_attribute
+                      }
+
+                      enum A {
+                        entry my_val2
+                      }
+              - type: paragraph
+                content:
+                  - type: text
+                    text: 'implicit syntax:'
+              - type: code_block
+                content:
+                  - type: text
+                    text: |
+
+                      class A {
+                        my_attribute
+                      }
+
+                      enum A {
+                        my_val2
+                      }
+              - type: paragraph
+                content:
+                  - type: text
+                    text: >-
+                      Attribute visibility. Syntax for defining visibility:
+                      [+|-|#|~] [attribute] attribute_name. LutaML uses these
+                      modificators to define attribute(entry) visbility:
+              - type: paragraph
+                content:
+                  - type: text
+                    text: + => public
+              - type: paragraph
+                content:
+                  - type: text
+                    text: '- => private'
+              - type: paragraph
+                content:
+                  - type: text
+                    text: '# => protected'
+              - type: paragraph
+                content:
+                  - type: text
+                    text: ~ => package
+              - type: paragraph
+                content:
+                  - type: text
+                    text: 'example:'
+              - type: paragraph
+                content:
+                  - type: text
+                    text: 'class Figure {'
+              - type: paragraph
+                content:
+                  - type: text
+                    text: ' // Public attribute `radius`'
+              - type: paragraph
+                content:
+                  - type: text
+                    text: ' + radius'
+              - type: paragraph
+                content:
+                  - type: text
+                    text: ' // private attribute `filled`'
+              - type: paragraph
+                content:
+                  - type: text
+                    text: ' - filled'
+              - type: paragraph
+                content:
+                  - type: text
+                    text: ' // protected attribute `length`'
+              - type: paragraph
+                content:
+                  - type: text
+                    text: ' # length'
+              - type: paragraph
+                content:
+                  - type: text
+                    text: '}  '
+              - type: paragraph
+                content:
+                  - type: text
+                    text: >-
+                      Also there can be used `definition` attribute in order to
+                      add annotations to attribute
+              - type: paragraph
+                content:
+                  - type: text
+                    text: 'class Figure {   '
+              - type: paragraph
+                content:
+                  - type: text
+                    text: '  + radius {     '
+              - type: paragraph
+                content:
+                  - type: text
+                    text: '    definition {       '
+              - type: paragraph
+                content:
+                  - type: text
+                    text: '      Radius of the Figure     '
+              - type: paragraph
+                content:
+                  - type: text
+                    text: '    }   '
+              - type: paragraph
+                content:
+                  - type: text
+                    text: '  } '
+              - type: paragraph
+                content:
+                  - type: text
+                    text: '}'
