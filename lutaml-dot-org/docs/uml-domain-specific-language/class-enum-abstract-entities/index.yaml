@@ -200,7 +200,9 @@ contents:
           - type: paragraph
             content:
               - type: text
-                text: 'Enum supports the same attribute` notation as '
+                text: >-
+                  Enum values can be represented with the same syntax attribute`
+                  notation as 
               - type: link
                 attrs:
                   schemaID: urn
@@ -212,5 +214,13 @@ contents:
                     text: class
               - type: text
                 text: ' '
-      - type: paragraph
+      - type: section
+        attrs:
+          id: untitled-section
+        content:
+          - type: section_header
+            content:
+              - type: text
+                text: Data_type entities
+          - type: paragraph
       - type: paragraph
