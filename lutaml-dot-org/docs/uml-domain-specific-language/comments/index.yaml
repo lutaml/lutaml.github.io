@@ -1,3 +1,78 @@
 title: Comments and multiline comments
 media: []
 redirectFrom: []
+contents:
+  doc:
+    type: doc
+    content:
+      - type: section
+        attrs:
+          id: untitled-section
+        content:
+          - type: section_header
+            content:
+              - type: text
+                text: Code comments
+          - type: paragraph
+            content:
+              - type: text
+                text: >-
+                  Use `//` notation for LutaML comments skipped by parser,
+                  example:
+          - type: paragraph
+          - type: code_block
+            content:
+              - type: text
+                text: |-
+                  // TODO: implement
+
+                  class Pet {}
+          - type: paragraph
+          - type: paragraph
+            content:
+              - type: text
+                text: >-
+                  Use `\**`(one line comment) or `*| |*`(multiline comment) to
+                  create comment object for diagram entry. If this syntax used
+                  inside class/enum/association block it will be created for
+                  owner of this block.
+          - type: paragraph
+          - type: code_block
+            content:
+              - type: text
+                text: |-
+                  ** I am a document comment
+
+                  *|
+
+                   This is a
+
+                   multiply
+
+                   lines document comment.
+
+                  *|
+
+                  class A
+
+                  enum B {
+
+                   ** one line enum comment
+
+                   foo
+
+                  *|
+
+                   This is a
+
+                   multiply
+
+                   lines class comment.
+
+                   *|
+
+                   bar
+
+                  }
+      - type: paragraph
+      - type: paragraph
