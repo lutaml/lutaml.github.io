@@ -1,0 +1,21 @@
+name: build
+
+on:
+  push:
+
+jobs:
+  build:
+    name: Build site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      - uses: actions/checkout@master
+      - name: Install NPM dependencies
+        run: |
+          yarn install
+      - name: Build site
+        run: |
+          yarn build
