@@ -7,6 +7,9 @@ jobs:
   build:
     name: Build site
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./lutaml-dot-org
     steps:
       - name: Use Node
         uses: actions/setup-node@v1
