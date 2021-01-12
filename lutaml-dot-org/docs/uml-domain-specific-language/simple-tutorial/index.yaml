@@ -143,28 +143,32 @@ contents:
             content:
               - type: text
                 text: |-
-                  class Customer {
-                    name: String[0..*]
-                    -phone: String
-                  }
+                  diagram MyView {
+                    title "my diagram"
 
-                  class Order {
-                    deliveryLocation: Location
-                    number: Integer[0..1]
-                  }
+                    class Customer {
+                      name: String[0..*]
+                      -phone: String
+                    }
 
-                  class Location {
-                    city
-                    address
-                  }
+                    class Order {
+                      deliveryLocation: Location
+                      number: Integer[0..1]
+                    }
 
-                  class NormalOrder {
-                    deliveryLocation: Location
-                    number: Integer[0..1]
-                  }
+                    class Location {
+                      city
+                      address
+                    }
 
-                  class FastDeliveryOrder {
-                    deliveryLocation: Location
-                    number: Integer[0..1]
+                    class NormalOrder {
+                      deliveryLocation: Location
+                      number: Integer[0..1]
+                    }
+
+                    class FastDeliveryOrder {
+                      deliveryLocation: Location
+                      number: Integer[0..1]
+                    }
                   }
       - type: paragraph
