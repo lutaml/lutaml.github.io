@@ -16,12 +16,12 @@ contents:
         content:
           - type: image
             attrs:
-              alt: example diagram
-              src: tutorial_diagram.png
+              alt: Example diagram
+              src: tutorial_diagram_1.png
           - type: figure_caption
             content:
               - type: text
-                text: example diagram
+                text: Example diagram
       - type: section
         attrs:
           id: untitled-section
