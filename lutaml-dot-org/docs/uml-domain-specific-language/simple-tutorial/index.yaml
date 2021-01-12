@@ -252,5 +252,22 @@ contents:
           - type: paragraph
             content:
               - type: text
-                text: '`owner_type` and `member_type`'
+                text: >-
+                  `owner_type` and `member_type` describes the type of
+                  association to display, if we dont supply any type lutaml uml
+                  will use the default arrow style. In case of our example
+                  diagram the relation between `Customer` and `Order` can be
+                  described as the following code:
+          - type: code_block
+            content:
+              - type: text
+                text: |-
+                  association {
+                    owner Order
+                    member Customer
+                  }
+          - type: paragraph
+            content:
+              - type: text
+                text: second
           - type: paragraph
