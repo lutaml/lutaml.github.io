@@ -96,5 +96,75 @@ contents:
           - type: section_header
             content:
               - type: text
-                text: Lutaml uml creation
+                text: Classes representation
           - type: paragraph
+            content:
+              - type: text
+                text: >-
+                  Class objects can be described with `class` keyword,
+                  visibility of attributes can be controlled with symbols `+`,
+                  `-`, `#`, if no visibility modifier provided lutaml will treat
+                  attribute entity as public attribute:
+          - type: code_block
+            content:
+              - type: text
+                text: |-
+                  class Customer {
+                    +name: String[0..*] // Similar visibility: `name: String`
+                    -phone: String
+                  }
+          - type: paragraph
+            content:
+              - type: text
+                text: >-
+                  The code above is pretty similar to the plantuml version.
+                  Lutaml uml alsosupports class and attribute annotations which
+                  can be described with `definition` keyword:
+          - type: paragraph
+          - type: code_block
+            content:
+              - type: text
+                text: |-
+                  class Customer {
+                    definition { Class describing customer entity and its metadata }
+                    +name: String[0..*] {
+                      definition {
+                        first name of the client, in lower case
+                      }
+                    }
+                    -phone: String
+                  }
+          - type: paragraph
+          - type: paragraph
+            content:
+              - type: text
+                text: 'The whole classes representation will look like this:'
+          - type: code_block
+            content:
+              - type: text
+                text: |-
+                  class Customer {
+                    name: String[0..*]
+                    -phone: String
+                  }
+
+                  class Order {
+                    deliveryLocation: Location
+                    number: Integer[0..1]
+                  }
+
+                  class Location {
+                    city
+                    address
+                  }
+
+                  class NormalOrder {
+                    deliveryLocation: Location
+                    number: Integer[0..1]
+                  }
+
+                  class FastDeliveryOrder {
+                    deliveryLocation: Location
+                    number: Integer[0..1]
+                  }
+      - type: paragraph
