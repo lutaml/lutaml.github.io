@@ -226,15 +226,31 @@ contents:
             content:
               - type: text
                 text: |-
-                  association BidirectionalAsscoiation {
+                  association {
                     owner_type aggregation
                     member_type direct
-                    owner Customer
-                    member AttributeProfile#attributeProfile [0..*]
+                    owner A
+                    member B
                   }
           - type: paragraph
           - type: paragraph
             content:
               - type: text
-                text: Second paragraph
+                text: >-
+                  `owner` and `member`  keywords describes direction of
+                  association, in order to describe plantuml association A —> B
+                  we need to write the following lutaml uml code:
+          - type: code_block
+            content:
+              - type: text
+                text: |-
+                  association {
+                    owner A
+                    member B
+                  }
+          - type: paragraph
+          - type: paragraph
+            content:
+              - type: text
+                text: '`owner_type` and `member_type`'
           - type: paragraph
