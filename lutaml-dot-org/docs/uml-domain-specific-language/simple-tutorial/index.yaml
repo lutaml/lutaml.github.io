@@ -269,5 +269,24 @@ contents:
           - type: paragraph
             content:
               - type: text
+                text: >-
+                  In order to described the inheritance between `Order` and
+                  `NormalOrder`/`FastDeliveryOrder` we need to use `member_type`
+                  attribute:
+          - type: code_block
+            content:
+              - type: text
+                text: |-
+                  association {
+                    owner NormalOrder
+                    member Order
+                  }
+                  association {
+                    owner FastDeliveryOrder
+                    member Order
+                  }
+          - type: paragraph
+            content:
+              - type: text
                 text: second
           - type: paragraph
