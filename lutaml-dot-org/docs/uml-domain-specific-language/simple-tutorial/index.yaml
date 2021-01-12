@@ -34,7 +34,67 @@ contents:
             content:
               - type: text
                 text: >-
-                  This simple diagram can be represented as the further plantuml
-                  file:
+                  This simple diagram can be represented as the following
+                  plantuml file:
+          - type: paragraph
           - type: code_block
-      - type: paragraph
+            content:
+              - type: text
+                text: >-
+                  @startuml
+
+                  '******* CLASS GROUPS
+                  *************************************************
+
+
+                  class Customer {
+                    +name: String[0..*]
+                    -phone: String
+                  }
+
+
+                  class Order {
+                    +deliveryLocation: Location
+                    +number: Integer[0..1]
+                  }
+
+
+                  class Location {
+                    +city
+                    +address
+                  }
+
+
+                  class NormalOrder {
+                    +deliveryLocation: Location
+                    +number: Integer[0..1]
+                  }
+
+
+                  class FastDeliveryOrder {
+                    +deliveryLocation: Location
+                    +number: Integer[0..1]
+                  }
+
+
+                  '******* CLASS RELATIONS
+                  **********************************************
+
+                  Order o-- Location
+
+                  NormalOrder --|> Order
+
+                  FastDeliveryOrder --|> Order
+
+                  Order --> Customer
+
+                  @enduml
+      - type: section
+        attrs:
+          id: untitled-section
+        content:
+          - type: section_header
+            content:
+              - type: text
+                text: Lutaml uml creation
+          - type: paragraph
