@@ -2,3 +2,21 @@ title: 'Simple tutorial '
 media:
   - Airbnb_New_Zealand_Arrowtown_House.jpg
 redirectFrom: []
+contents:
+  doc:
+    type: doc
+    content:
+      - type: paragraph
+        content:
+          - type: text
+            text: First paragraph
+      - type: section
+        attrs:
+          id: untitled-section
+        content:
+          - type: section_header
+            content:
+              - type: text
+                text: Subsection
+          - type: paragraph
+          - type: paragraph
