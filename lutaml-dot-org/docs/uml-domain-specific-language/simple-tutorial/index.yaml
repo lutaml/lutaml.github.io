@@ -217,3 +217,24 @@ contents:
               - type: text
                 text: Associations representation
           - type: paragraph
+            content:
+              - type: text
+                text: >-
+                  Unlike plantuml, lutaml uml uses here special keyword
+                  `association` to define associaton. Here is an example:
+          - type: code_block
+            content:
+              - type: text
+                text: |-
+                  association BidirectionalAsscoiation {
+                    owner_type aggregation
+                    member_type direct
+                    owner Customer
+                    member AttributeProfile#attributeProfile [0..*]
+                  }
+          - type: paragraph
+          - type: paragraph
+            content:
+              - type: text
+                text: Second paragraph
+          - type: paragraph
