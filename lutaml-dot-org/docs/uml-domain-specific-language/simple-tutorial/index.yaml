@@ -101,6 +101,27 @@ contents:
               - type: text
                 text: Diagram root tag
           - type: paragraph
+            content:
+              - type: text
+                text: >-
+                  In plantuml we start our diagram definition with `@startuml`
+                  keyword and end with `@enduml`, in lutaml uml this role is
+                  given to `diagram` tag:
+          - type: code_block
+            content:
+              - type: text
+                text: |-
+                  diagram MyView {
+                    title "My diagram"
+                  }
+          - type: paragraph
+            content:
+              - type: text
+                text: >-
+                  You can supply additional attributes for diagram in `diagram`
+                  root tag, we can set custom diagram name with `title`
+                  attribute or set custom font with `fontname` attribute.
+      - type: paragraph
       - type: section
         attrs:
           id: untitled-section
@@ -108,7 +129,7 @@ contents:
           - type: section_header
             content:
               - type: text
-                text: 'Classes representation, diagram root tag'
+                text: Classes representation
           - type: paragraph
             content:
               - type: text
