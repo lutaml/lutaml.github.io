@@ -16,7 +16,7 @@ contents:
         content:
           - type: image
             attrs:
-              alt: ''
+              alt: example diagram
               src: tutorial_diagram.png
           - type: figure_caption
             content:
