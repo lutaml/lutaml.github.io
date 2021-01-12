@@ -11,7 +11,7 @@ contents:
           - type: text
             text: >-
               In this article we will try to create simple lutaml uml file from
-              simple diagram:
+              a simple diagram:
       - type: figure
         content:
           - type: image
@@ -22,3 +22,19 @@ contents:
             content:
               - type: text
                 text: example diagram
+      - type: section
+        attrs:
+          id: untitled-section
+        content:
+          - type: section_header
+            content:
+              - type: text
+                text: Plantuml version
+          - type: paragraph
+            content:
+              - type: text
+                text: >-
+                  This simple diagram can be represented as the further plantuml
+                  file:
+          - type: code_block
+      - type: paragraph
