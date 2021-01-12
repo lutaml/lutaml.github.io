@@ -264,12 +264,10 @@ contents:
               - type: text
                 text: |
                   association {
-                    member_type 'inheritance'
                     owner NormalOrder
                     member Order
                   }
                   association {
-                    member_type 'inheritance'
                     owner FastDeliveryOrder
                     member Order
                   }
