@@ -11,7 +11,7 @@ contents:
           - type: text
             text: >-
               In this article we will try to create a simple lutaml uml file
-              from a simple diagram:
+              from the following diagram:
       - type: figure
         content:
           - type: image
