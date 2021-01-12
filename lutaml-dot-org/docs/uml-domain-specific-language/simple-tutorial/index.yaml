@@ -208,4 +208,12 @@ contents:
                       number: Integer[0..1]
                     }
                   }
-      - type: paragraph
+      - type: section
+        attrs:
+          id: untitled-section
+        content:
+          - type: section_header
+            content:
+              - type: text
+                text: Associations representation
+          - type: paragraph
