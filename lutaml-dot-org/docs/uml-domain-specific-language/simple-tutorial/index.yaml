@@ -1,5 +1,6 @@
 title: 'Simple tutorial '
-media: []
+media:
+  - tutorial_diagram.png
 redirectFrom: []
 contents:
   doc:
