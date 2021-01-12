@@ -9,14 +9,16 @@ contents:
       - type: paragraph
         content:
           - type: text
-            text: First paragraph
-      - type: section
-        attrs:
-          id: untitled-section
+            text: >-
+              In this article we will try to create simple lutaml uml file from
+              simple diagram:
+      - type: figure
         content:
-          - type: section_header
+          - type: image
+            attrs:
+              alt: ''
+              src: tutorial_diagram.png
+          - type: figure_caption
             content:
               - type: text
-                text: Subsection
-          - type: paragraph
-      - type: paragraph
+                text: example diagram
