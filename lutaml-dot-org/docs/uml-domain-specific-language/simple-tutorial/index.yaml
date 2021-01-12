@@ -96,7 +96,7 @@ contents:
           - type: section_header
             content:
               - type: text
-                text: Classes representation
+                text: 'Classes representation, diagram root tag'
           - type: paragraph
             content:
               - type: text
@@ -117,9 +117,13 @@ contents:
             content:
               - type: text
                 text: >-
-                  The code above is pretty similar to the plantuml version.
-                  Lutaml uml alsosupports class and attribute annotations which
-                  can be described with `definition` keyword:
+                  `//` is a comment tag for lutaml uml, code after this tag on
+                  this line will be ignored by parser.  The code above is pretty
+                  similar to the plantuml version. Lutaml uml also supports
+                  class and attribute annotations which can be described with
+                  `definition` keyword. Lutaml uml parser will parse these tags
+                  and link them to the related entities(class/enum or
+                  attribute/value). Here is the example:
           - type: paragraph
           - type: code_block
             content:
