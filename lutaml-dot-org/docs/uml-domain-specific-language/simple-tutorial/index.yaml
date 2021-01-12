@@ -290,5 +290,18 @@ contents:
           - type: paragraph
             content:
               - type: text
+                text: 'In order to represent aggregation realtion between '
+          - type: code_block
+            content:
+              - type: text
+                text: |-
+                  association {
+                    member_type aggregation
+                    owner Location
+                    member Order
+                  }
+          - type: paragraph
+            content:
+              - type: text
                 text: second
           - type: paragraph
