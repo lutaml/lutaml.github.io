@@ -10,8 +10,8 @@ contents:
         content:
           - type: text
             text: >-
-              In this article we will try to create simple lutaml uml file from
-              a simple diagram:
+              In this article we will try to create a simple lutaml uml file
+              from a simple diagram:
       - type: figure
         content:
           - type: image
