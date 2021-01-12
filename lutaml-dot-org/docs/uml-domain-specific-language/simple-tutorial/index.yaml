@@ -255,16 +255,23 @@ contents:
                 text: >-
                   `owner_type` and `member_type` describes the type of
                   association to display, if we dont supply any type lutaml uml
-                  will use the default arrow style. In case of our example
-                  diagram the relation between `Customer` and `Order` can be
-                  described as the following code:
+                  will use the default arrow style - inheritance. In case of our
+                  example diagram the relation between `Order` and
+                  `NormalOrder`/`FastDeliveryOrder` can be described with the
+                  following code:
           - type: code_block
             content:
               - type: text
-                text: |-
+                text: |
                   association {
-                    owner Order
-                    member Customer
+                    member_type 'inheritance'
+                    owner NormalOrder
+                    member Order
+                  }
+                  association {
+                    member_type 'inheritance'
+                    owner FastDeliveryOrder
+                    member Order
                   }
           - type: paragraph
             content:
@@ -278,12 +285,9 @@ contents:
               - type: text
                 text: |-
                   association {
-                    owner NormalOrder
-                    member Order
-                  }
-                  association {
-                    owner FastDeliveryOrder
-                    member Order
+                    member_type 'direct'
+                    owner Order
+                    member Customer
                   }
           - type: paragraph
             content:
