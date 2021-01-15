@@ -438,4 +438,73 @@ contents:
                     owner Location
                     member Order
                   }
+      - type: section
+        attrs:
+          id: untitled-section
+        content:
+          - type: section_header
+            content:
+              - type: text
+                text: Putting it all together
           - type: paragraph
+            content:
+              - type: text
+                text: 'The resulting lutaml file will look like this:'
+          - type: code_block
+            content:
+              - type: text
+                text: |
+                  diagram MyView {
+                    title "my diagram"
+
+                    //******* CLASS GROUPS *************************************************
+                    class Customer {
+                      name: String[0..*]
+                      -phone: String
+                    }
+
+                    class Order {
+                      deliveryLocation: Location
+                      number: Integer[0..1]
+                    }
+
+                    class Location {
+                      city
+                      address
+                    }
+
+                    class NormalOrder {
+                      deliveryLocation: Location
+                      number: Integer[0..1]
+                    }
+
+                    class FastDeliveryOrder {
+                      deliveryLocation: Location
+                      number: Integer[0..1]
+                    }
+
+                    //******* CLASS RELATIONS **********************************************
+
+                    association {
+                      owner NormalOrder
+                      member Order
+                    }
+
+                    association {
+                      owner FastDeliveryOrder
+                      member Order
+                    }
+
+                    association {
+                      member_type 'direct'
+                      owner Order
+                      member Customer
+                    }
+
+                    association {
+                      member_type aggregation
+                      owner Location
+                      member Order
+                    }
+                  }
+      - type: paragraph
