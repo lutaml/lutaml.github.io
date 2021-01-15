@@ -274,10 +274,31 @@ contents:
           - type: paragraph
             content:
               - type: text
-                text: >-
-                  In order to described the inheritance between `Order` and
-                  `NormalOrder`/`FastDeliveryOrder` we need to use `member_type`
-                  attribute:
+                text: 'In order to described the inheritance between '
+              - type: text
+                marks:
+                  - type: em
+                text: Order
+              - type: text
+                text: ' and '
+              - type: text
+                marks:
+                  - type: em
+                text: NormalOrder
+              - type: text
+                text: /
+              - type: text
+                marks:
+                  - type: em
+                text: FastDeliveryOrder
+              - type: text
+                text: ' we need to use '
+              - type: text
+                marks:
+                  - type: em
+                text: member_type
+              - type: text
+                text: ' attribute:'
           - type: code_block
             content:
               - type: text
@@ -290,7 +311,7 @@ contents:
           - type: paragraph
             content:
               - type: text
-                text: 'In order to represent aggregation realtion between '
+                text: 'In order to represent aggregation relation between '
           - type: code_block
             content:
               - type: text
@@ -303,5 +324,30 @@ contents:
           - type: paragraph
             content:
               - type: text
-                text: second
+                text: 'The whole associations block will look like this:'
+          - type: code_block
+            content:
+              - type: text
+                text: |-
+                  association {
+                    owner NormalOrder
+                    member Order
+                  }
+
+                  association {
+                    owner FastDeliveryOrder
+                    member Order
+                  }
+
+                  association {
+                    member_type 'direct'
+                    owner Order
+                    member Customer
+                  }
+
+                  association {
+                    member_type aggregation
+                    owner Location
+                    member Order
+                  }
           - type: paragraph
