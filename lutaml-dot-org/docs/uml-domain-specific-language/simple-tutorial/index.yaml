@@ -201,14 +201,17 @@ contents:
           - type: paragraph
             content:
               - type: text
-                text: >-
-                  `//` is a comment tag for lutaml uml, code after this tag on
-                  this line will be ignored by parser.  The code above is pretty
-                  similar to the plantuml version. Lutaml uml also supports
-                  class and attribute annotations which can be described with
-                  `definition` keyword. Lutaml uml parser will parse these tags
-                  and link them to the related entities(class/enum or
-                  attribute/value). Here is the example:
+                marks:
+                  - type: em
+                text: //
+              - type: text
+                text: ' is a comment tag for lutaml uml, code after this tag on this line will be ignored by parser.  The code above is pretty similar to the plantuml version. Lutaml uml also supports class and attribute annotations which can be described with '
+              - type: text
+                marks:
+                  - type: em
+                text: definition
+              - type: text
+                text: ' keyword. Lutaml uml parser will parse these tags and link them to the related entities(class/enum or attribute/value). Here is the example:'
           - type: paragraph
           - type: code_block
             content:
@@ -271,9 +274,13 @@ contents:
           - type: paragraph
             content:
               - type: text
-                text: >-
-                  Unlike plantuml, lutaml uml uses here special keyword
-                  `association` to define associaton. Here is an example:
+                text: 'Unlike plantuml, lutaml uml uses here special keyword '
+              - type: text
+                marks:
+                  - type: em
+                text: association
+              - type: text
+                text: ' to define associaton. Here is an example:'
           - type: code_block
             content:
               - type: text
@@ -288,10 +295,17 @@ contents:
           - type: paragraph
             content:
               - type: text
-                text: >-
-                  `owner` and `member`  keywords describes direction of
-                  association, in order to describe plantuml association A —> B
-                  we need to write the following lutaml uml code:
+                marks:
+                  - type: em
+                text: owner
+              - type: text
+                text: ' and '
+              - type: text
+                marks:
+                  - type: em
+                text: member
+              - type: text
+                text: '  keywords describes direction of association, in order to describe plantuml association A —> B we need to write the following lutaml uml code:'
           - type: code_block
             content:
               - type: text
@@ -304,13 +318,35 @@ contents:
           - type: paragraph
             content:
               - type: text
-                text: >-
-                  `owner_type` and `member_type` describes the type of
-                  association to display, if we dont supply any type lutaml uml
-                  will use the default arrow style - inheritance. In case of our
-                  example diagram the relation between `Order` and
-                  `NormalOrder`/`FastDeliveryOrder` can be described with the
-                  following code:
+                marks:
+                  - type: em
+                text: owner_type
+              - type: text
+                text: ' and '
+              - type: text
+                marks:
+                  - type: em
+                text: member_type
+              - type: text
+                text: ' describes the type of association to display, if we dont supply any type lutaml uml will use the default arrow style - inheritance. In case of our example diagram the relation between '
+              - type: text
+                marks:
+                  - type: em
+                text: Order
+              - type: text
+                text: ' and '
+              - type: text
+                marks:
+                  - type: em
+                text: NormalOrder
+              - type: text
+                text: /
+              - type: text
+                marks:
+                  - type: em
+                text: FastDeliveryOrder
+              - type: text
+                text: ' can be described with the following code:'
           - type: code_block
             content:
               - type: text
