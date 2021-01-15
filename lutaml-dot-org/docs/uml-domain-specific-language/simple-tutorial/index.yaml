@@ -103,10 +103,25 @@ contents:
           - type: paragraph
             content:
               - type: text
-                text: >-
-                  In plantuml we start our diagram definition with `@startuml`
-                  keyword and end with `@enduml`, in lutaml uml this role is
-                  given to `diagram` tag:
+                text: 'In plantuml we start our diagram definition with '
+              - type: text
+                marks:
+                  - type: em
+                text: '@startuml'
+              - type: text
+                text: ' keyword and end with '
+              - type: text
+                marks:
+                  - type: em
+                text: '@enduml'
+              - type: text
+                text: ', in lutaml uml this role is given to the '
+              - type: text
+                marks:
+                  - type: em
+                text: diagram
+              - type: text
+                text: ' tag:'
           - type: code_block
             content:
               - type: text
@@ -117,10 +132,25 @@ contents:
           - type: paragraph
             content:
               - type: text
-                text: >-
-                  You can supply additional attributes for diagram in `diagram`
-                  root tag, we can set custom diagram name with `title`
-                  attribute or set custom font with `fontname` attribute.
+                text: 'You can supply additional attributes for diagram in '
+              - type: text
+                marks:
+                  - type: em
+                text: diagram
+              - type: text
+                text: ' root tag, we can set custom diagram name with '
+              - type: text
+                marks:
+                  - type: em
+                text: title
+              - type: text
+                text: ' attribute or set custom font with '
+              - type: text
+                marks:
+                  - type: em
+                text: fontname
+              - type: text
+                text: ' attribute.'
       - type: paragraph
       - type: section
         attrs:
@@ -133,10 +163,32 @@ contents:
           - type: paragraph
             content:
               - type: text
+                text: 'Class objects can be described with '
+              - type: text
+                marks:
+                  - type: em
+                text: class
+              - type: text
+                text: ' keyword, visibility of attributes can be controlled with symbols '
+              - type: text
+                marks:
+                  - type: em
+                text: +
+              - type: text
+                text: ', '
+              - type: text
+                marks:
+                  - type: em
+                text: '-'
+              - type: text
+                text: ', '
+              - type: text
+                marks:
+                  - type: em
+                text: '#'
+              - type: text
                 text: >-
-                  Class objects can be described with `class` keyword,
-                  visibility of attributes can be controlled with symbols `+`,
-                  `-`, `#`, if no visibility modifier provided lutaml will treat
+                  , if no visibility modifier provided lutaml will treat
                   attribute entity as public attribute:
           - type: code_block
             content:
