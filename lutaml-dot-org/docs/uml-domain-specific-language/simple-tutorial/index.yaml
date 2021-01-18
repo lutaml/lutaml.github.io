@@ -106,19 +106,19 @@ contents:
                 text: 'In plantuml we start our diagram definition with '
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: '@startuml'
               - type: text
                 text: ' keyword and end with '
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: '@enduml'
               - type: text
                 text: ', in lutaml uml this role is given to the '
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: diagram
               - type: text
                 text: ' tag:'
