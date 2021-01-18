@@ -135,19 +135,19 @@ contents:
                 text: 'You can supply additional attributes for diagram in '
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: diagram
               - type: text
                 text: ' root tag, we can set custom diagram name with '
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: title
               - type: text
                 text: ' attribute or set custom font with '
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: fontname
               - type: text
                 text: ' attribute.'
@@ -166,25 +166,25 @@ contents:
                 text: 'Class objects can be described with '
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: class
               - type: text
                 text: ' keyword, visibility of attributes can be controlled with symbols '
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: +
               - type: text
                 text: ', '
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: '-'
               - type: text
                 text: ', '
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: '#'
               - type: text
                 text: >-
@@ -202,13 +202,13 @@ contents:
             content:
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: //
               - type: text
                 text: ' is a comment tag for lutaml uml, code after this tag on this line will be ignored by parser.  The code above is pretty similar to the plantuml version. Lutaml uml also supports class and attribute annotations which can be described with '
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: definition
               - type: text
                 text: ' keyword. Lutaml uml parser will parse these tags and link them to the related entities(class/enum or attribute/value). Here is the example:'
@@ -277,7 +277,7 @@ contents:
                 text: 'Unlike plantuml, lutaml uml uses here special keyword '
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: association
               - type: text
                 text: ' to define associaton. Here is an example:'
@@ -296,13 +296,13 @@ contents:
             content:
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: owner
               - type: text
                 text: ' and '
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: member
               - type: text
                 text: '  keywords describes direction of association, in order to describe plantuml association A —> B we need to write the following lutaml uml code:'
@@ -319,31 +319,31 @@ contents:
             content:
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: owner_type
               - type: text
                 text: ' and '
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: member_type
               - type: text
                 text: ' describes the type of association to display, if we dont supply any type lutaml uml will use the default arrow style - inheritance. In case of our example diagram the relation between '
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: Order
               - type: text
                 text: ' and '
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: NormalOrder
               - type: text
                 text: /
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: FastDeliveryOrder
               - type: text
                 text: ' can be described with the following code:'
@@ -365,25 +365,25 @@ contents:
                 text: 'In order to described the inheritance between '
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: Order
               - type: text
                 text: ' and '
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: NormalOrder
               - type: text
                 text: /
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: FastDeliveryOrder
               - type: text
                 text: ' we need to use '
               - type: text
                 marks:
-                  - type: em
+                  - type: code
                 text: member_type
               - type: text
                 text: ' attribute:'
