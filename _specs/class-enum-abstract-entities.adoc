@@ -1,0 +1,136 @@
+---
+title: "Class/enum/abstract entities"
+categories:
+  - class
+  - enum
+  - abstract
+author:
+  name: Ronald Tse
+  email: tse@ribose.com
+  use_picture: assets
+  social_links:
+    - https://www.linkedin.com/in/rhtse/
+    - https://github.com/ronaldtse
+---
+
+= Class/enum/abstract entities
+
+== Classes entities
+
+in lutaml dsl class is defined with keyword `class`:
+
+```
+class Pet {}
+```
+== Class attributes
+
+Full syntax:
+
+```
+[visibility][/][attribute] name [:type][multiplicity][=initial value][{attribute body}]
+```
+
+where:
+
+`visibility` can be equal to `-` - private, `+` - public, `#` - protected, `~` - friendly
+
+`attribute` - attrbute keyword
+
+`/` - symbolizes a derived attribute.
+
+`multiplicity` - Multiplicity is in square brackets (e.g. [1..*]).
+
+`initial value` - Default value specifies the initial value of the attribute.
+
+`{attribute body}` - Body of attribute, additional properties for attribute
+
+One can use explicit or implicit syntax for attribute definition
+
+explicit syntax:
+
+```
+class A {
+  attribute my_attribute
+}
+
+enum A {
+  entry my_val2
+}
+implicit syntax:
+
+
+class A {
+  my_attribute
+}
+
+enum A {
+  my_val2
+}
+```
+
+Attribute visibility. Syntax for defining visibility: [+|-|#|~] [attribute] attribute_name. LutaML uses these modificators to define attribute(entry) visbility:
+
+```
++ => public
+
+- => private
+
+# => protected
+
+~ => package
+```
+
+example:
+
+```
+class Figure {
+ // Public attribute `radius`
+ + radius
+
+ // private attribute `filled`
+ - filled
+
+ // protected attribute `length`
+ # length
+}
+```
+
+Also there can be used `definition` attribute in order to add annotations to attribute
+
+```
+class Figure {   
+  + radius {     
+    definition {       
+      Radius of the Figure     
+    }   
+  } 
+}
+```
+
+== Enum entities
+
+Enumerators entities can be defined with `enum` keyword:
+
+```
+enum A {}
+```
+
+Enum values can be represented with the same syntax attribute` notation as class
+
+== Data_type entities
+
+Data types are defined with `data_type` keyword:
+
+```
+data_type "Banking Information" {
+  "art code"
+}
+```
+
+== Primitive entities
+
+Primitive entities can be defined with `primitive` keyword:
+
+```
+primitive Integer
+```

@@ -1,0 +1,59 @@
+---
+title: "Code comments"
+categories:
+  - comments
+author:
+  name: Ronald Tse
+  email: tse@ribose.com
+  use_picture: assets
+  social_links:
+    - https://www.linkedin.com/in/rhtse/
+    - https://github.com/ronaldtse
+---
+
+= Code comments
+
+Use `//` notation for LutaML comments skipped by parser, example:
+
+```
+// TODO: implement
+class Pet {}
+```
+
+Use `\**`(one line comment) or `*| |*`(multiline comment) to create comment object for diagram entry. If this syntax used inside class/enum/association block it will be created for owner of this block.
+
+```
+** I am a document comment
+
+*|
+
+ This is a
+
+ multiply
+
+ lines document comment.
+
+*|
+
+class A
+
+enum B {
+
+ ** one line enum comment
+
+ foo
+
+*|
+
+ This is a
+
+ multiply
+
+ lines class comment.
+
+ *|
+
+ bar
+
+}
+```
