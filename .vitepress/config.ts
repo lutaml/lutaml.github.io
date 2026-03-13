@@ -4,6 +4,7 @@ export default defineConfig({
   title: 'LutaML',
   description: 'Universal data modeller',
   lang: 'en-US',
+  lastUpdated: true,
 
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' }],
@@ -32,6 +33,7 @@ export default defineConfig({
         ]
       },
       { text: 'Documentation', link: 'https://www.lutaml.org/docs/' },
+      { text: 'Blog', link: '/blog/' },
       { text: 'About', link: '/about' }
     ],
 
