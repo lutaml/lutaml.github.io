@@ -1,6 +1,24 @@
+# Dependencies
+node_modules/
 
-node_modules
-tmp
-artifacts
-dist
-.vscode
+# Build output
+dist/
+.vitepress/dist/
+.vitepress/cache/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor directories
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Misc
+tmp/
+artifacts/
+
