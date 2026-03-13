@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { softwareNavItems } from './data/projects'
 
 export default defineConfig({
   title: 'LutaML',
@@ -26,11 +27,7 @@ export default defineConfig({
       { text: 'Introduction', link: '/docs/simple-tutorial' },
       {
         text: 'Software',
-        items: [
-          { text: 'lutaml-model', link: 'https://github.com/lutaml/lutaml-model' },
-          { text: 'lutaml-hal', link: 'https://github.com/lutaml/lutaml-hal' },
-          { text: 'expressir', link: 'https://github.com/lutaml/expressir' }
-        ]
+        items: softwareNavItems
       },
       { text: 'Documentation', link: 'https://www.lutaml.org/docs/' },
       { text: 'Blog', link: '/blog/' },

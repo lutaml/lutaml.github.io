@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { premierProjects, extendedProjects, transformedProjects } from '../../data/projects'
+import { premierProjects, extendedProjects } from '../../data/projects'
 </script>
 
 <template>
@@ -52,22 +52,6 @@ import { premierProjects, extendedProjects, transformedProjects } from '../../da
       <div v-for="project in extendedProjects" :key="project.name" class="project-list-item">
         <a :href="project.github" target="_blank" rel="noopener">{{ project.name }}</a>
         <span class="category-badge extended">{{ project.category }}</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title">
-      <span class="icon">◈</span>
-      Transformed Models
-    </h2>
-    <p class="section-description">
-      Tools for transforming and processing data models.
-    </p>
-    <div class="project-list">
-      <div v-for="project in transformedProjects" :key="project.name" class="project-list-item">
-        <a :href="project.github" target="_blank" rel="noopener">{{ project.name }}</a>
-        <span class="category-badge transformed">{{ project.category }}</span>
       </div>
     </div>
   </div>

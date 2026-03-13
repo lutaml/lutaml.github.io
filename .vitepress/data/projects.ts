@@ -29,6 +29,24 @@ export const projects: Project[] = [
     category: 'Core'
   },
   {
+    name: 'canon',
+    version: '',
+    description: 'Semantic comparison for serialization formats with W3C XML C14N canonicalization. Compare XML, HTML, JSON, and YAML semantically.',
+    github: 'https://github.com/lutaml/canon',
+    docs: 'https://lutaml.github.io/canon/',
+    featured: true,
+    category: 'Core'
+  },
+  {
+    name: 'moxml',
+    version: '',
+    description: 'Modern XML processing library with unified API across Nokogiri, Oga, REXML, LibXML, and Ox backends.',
+    github: 'https://github.com/lutaml/moxml',
+    docs: 'https://lutaml.github.io/moxml/',
+    featured: true,
+    category: 'Core'
+  },
+  {
     name: 'expressir',
     version: 'v2.2.0',
     description: 'EXPRESS language parser and tools for ISO 10303 STEP data modeling. Parse, analyze, and transform EXPRESS schemas.',
@@ -37,21 +55,37 @@ export const projects: Project[] = [
     featured: true,
     category: 'Core'
   },
+  {
+    name: 'unibuf',
+    version: '',
+    description: 'Universal Buffer Format Parser for Protocol Buffers, FlatBuffers, and Cap\'n Proto with text/binary format support.',
+    github: 'https://github.com/lutaml/unibuf',
+    featured: true,
+    category: 'Core'
+  },
+  {
+    name: 'xmi',
+    version: '',
+    description: 'Ruby object mapper for XMI (XML Metadata Interchange) files with dynamic class generation.',
+    github: 'https://github.com/lutaml/xmi',
+    featured: true,
+    category: 'Core'
+  },
 
-  // Extended Models
+  // Extended Projects
+  {
+    name: 'rng',
+    version: '',
+    description: 'Ruby tools for RELAX NG schemas supporting both XML (.rng) and compact (.rnc) syntax.',
+    github: 'https://github.com/lutaml/rng',
+    featured: false,
+    category: 'Extended'
+  },
   {
     name: 'lutaml',
     version: '',
     description: 'Universal data modeling language and toolkit for creating interoperable data models.',
     github: 'https://github.com/lutaml/lutaml',
-    featured: false,
-    category: 'Extended'
-  },
-  {
-    name: 'lutaml-express',
-    version: '',
-    description: 'LutaML integration for EXPRESS language modeling and processing.',
-    github: 'https://github.com/lutaml/lutaml-express',
     featured: false,
     category: 'Extended'
   },
@@ -72,73 +106,64 @@ export const projects: Project[] = [
     category: 'Extended'
   },
   {
-    name: 'lutaml-sysml',
+    name: 'ali',
     version: '',
-    description: 'SysML modeling support for the LutaML ecosystem.',
-    github: 'https://github.com/lutaml/lutaml-sysml',
+    description: 'NISO Access and License Indicators (ALI) Schemas implementation (NISO RP-22-2021).',
+    github: 'https://github.com/lutaml/ali',
     featured: false,
     category: 'Extended'
   },
   {
-    name: 'lutaml-uml',
+    name: 'genericode',
     version: '',
-    description: 'UML modeling support with LutaML syntax and tools.',
-    github: 'https://github.com/lutaml/lutaml-uml',
+    description: 'OASIS Genericode 1.0 implementation for code lists in XML (.gc) and JSON (.gcj) formats.',
+    github: 'https://github.com/lutaml/genericode',
     featured: false,
     category: 'Extended'
   },
   {
-    name: 'lutaml-xmi',
+    name: 'messagepack',
     version: '',
-    description: 'XMI (XML Metadata Interchange) support for model interchange.',
-    github: 'https://github.com/lutaml/lutaml-xmi',
+    description: 'Pure Ruby MessagePack binary serialization format implementation.',
+    github: 'https://github.com/lutaml/messagepack',
+    docs: 'https://lutaml.github.io/messagepack/',
     featured: false,
     category: 'Extended'
   },
-
-  // Transformed Models
   {
-    name: 'annotated-express',
+    name: 'oasis-etm',
     version: '',
-    description: 'Tools for working with annotated EXPRESS schemas.',
-    github: 'https://github.com/lutaml/annotated-express',
+    description: 'OASIS Exchange Table Model TR 9503:1995 implementation for DocBook and NISO JATS.',
+    github: 'https://github.com/lutaml/oasis-etm',
     featured: false,
-    category: 'Transformed'
+    category: 'Extended'
   },
   {
-    name: 'express-grammar',
+    name: 'reqif',
     version: '',
-    description: 'EXPRESS language grammar definitions for parsing.',
-    github: 'https://github.com/lutaml/express-grammar',
+    description: 'ReqIF (Requirements Interchange Format) v1.2 parser and generator.',
+    github: 'https://github.com/lutaml/reqif',
     featured: false,
-    category: 'Transformed'
-  },
-  {
-    name: 'expression',
-    version: '',
-    description: 'Expression parsing and evaluation library.',
-    github: 'https://github.com/lutaml/expression',
-    featured: false,
-    category: 'Transformed'
-  },
-  {
-    name: 'reeper',
-    version: '',
-    description: 'EXPRESS schema processing and transformation tools.',
-    github: 'https://github.com/lutaml/reeper',
-    featured: false,
-    category: 'Transformed'
+    category: 'Extended'
   },
   {
     name: 'versionian',
     version: '',
-    description: 'Version management for data models and schemas.',
+    description: 'Declarative versioning schemes library supporting semantic, calendar, and custom version formats.',
     github: 'https://github.com/lutaml/versionian',
+    docs: 'https://lutaml.github.io/versionian/',
     featured: false,
-    category: 'Transformed'
+    category: 'Extended'
   }
 ]
 
 export const premierProjects = projects.filter(p => p.featured)
 export const extendedProjects = projects.filter(p => !p.featured && p.category === 'Extended')
-export const transformedProjects = projects.filter(p => !p.featured && p.category === 'Transformed')
+
+// Generate nav items for Software dropdown from all projects (sorted alphabetically)
+export const softwareNavItems = [...projects]
+  .sort((a, b) => a.name.localeCompare(b.name))
+  .map(p => ({
+    text: p.name,
+    link: p.docs || p.github
+  }))
