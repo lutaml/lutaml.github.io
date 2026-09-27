@@ -1,0 +1,42 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="LutaML — Universal Data Modeller">
+  <section class="mx-auto max-w-4xl px-6 py-20 text-center">
+    <img src="/lutaml-logo_logo-full-light.svg" alt="LutaML" class="mx-auto mb-8 h-16 dark:hidden" />
+    <img src="/lutaml-logo_logo-full-dark.svg" alt="LutaML" class="mx-auto mb-8 h-16 hidden dark:block" />
+    <h1 class="text-4xl font-bold tracking-tight mb-4">Universal Data Modeller</h1>
+    <p class="text-lg text-gray-500 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+      Define your data models once, use them everywhere. LutaML provides a unified approach
+      to data modeling across multiple formats and standards.
+    </p>
+    <div class="flex justify-center gap-4">
+      <a href="/docs/simple-tutorial" class="rounded-lg bg-blue-700 px-6 py-3 font-medium text-white hover:bg-blue-800 transition">
+        Get Started
+      </a>
+      <a href="https://github.com/lutaml" class="rounded-lg border border-gray-300 dark:border-gray-700 px-6 py-3 font-medium hover:bg-gray-50 dark:hover:bg-gray-900 transition">
+        View on GitHub
+      </a>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-6 py-12">
+    <h2 class="text-2xl font-semibold text-center mb-3">Premier Projects</h2>
+    <p class="text-center text-gray-500 dark:text-gray-400 mb-8">The core projects that form the foundation of the LutaML ecosystem.</p>
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <a href="https://github.com/lutaml/lutaml-model" class="rounded-xl border border-gray-200 dark:border-gray-800 p-6 hover:border-blue-500 transition">
+        <h3 class="font-semibold text-lg mb-2">LutaML Model</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Declarative data modelling with serialization to YAML, JSON, XML, and more.</p>
+      </a>
+      <a href="https://github.com/lutaml/lutaml-store" class="rounded-xl border border-gray-200 dark:border-gray-800 p-6 hover:border-blue-500 transition">
+        <h3 class="font-semibold text-lg mb-2">LutaML Store</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Store-centric API for LutaML Model objects across multiple backends.</p>
+      </a>
+      <a href="https://github.com/lutaml/lutaml-expressir" class="rounded-xl border border-gray-200 dark:border-gray-800 p-6 hover:border-blue-500 transition">
+        <h3 class="font-semibold text-lg mb-2">Expressir</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400">EXPRESS schema parser and data model for ISO 10303.</p>
+      </a>
+    </div>
+  </section>
+</Base>

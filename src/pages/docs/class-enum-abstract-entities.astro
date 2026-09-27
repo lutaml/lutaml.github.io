@@ -1,0 +1,250 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+<Base title="class-enum-abstract-entities — LutaML">
+  <article class="prose prose-lg dark:prose-invert mx-auto max-w-3xl px-6 py-12">
+    # Classes, Enums, and Data Types
+      <br/>
+    ## Classes
+      <br/>
+    A `class` defines a collection of attributes representing a type of object.
+      <br/>
+    ### Basic Class
+      <br/>
+    ```lml
+    class Studio {
+      attribute location, String
+      attribute potter, String
+      attribute kiln, String
+    }
+    ```
+      <br/>
+    ### Class with Definition
+      <br/>
+    ```lml
+    class Ceramic {
+      definition {
+        This class represents a ceramic object.
+      }
+      attribute type, String
+      attribute firing_temperature, Integer
+    }
+    ```
+      <br/>
+    ### Class with Constraints
+      <br/>
+    ```lml
+    class GlazeTechnique {
+      attribute name, String {
+        values { "Celadon", "Raku", "Majolica" }
+      }
+    }
+    ```
+      <br/>
+    ## Attributes
+      <br/>
+    ### Full Syntax
+      <br/>
+    ```lml
+    attribute name, Type { cardinality min..max default: value }
+    ```
+      <br/>
+    ### Attribute Types
+      <br/>
+    | Component | Description |
+    |-----------|-------------|
+    | `name` | The attribute name |
+    | `Type` | The attribute type (primitive or class reference) |
+    | `cardinality` | Number of allowed values |
+    | `default` | Default value |
+    | `values` | Allowed values constraint |
+    | `pattern` | Regex pattern for strings |
+      <br/>
+    ### Visibility
+      <br/>
+    Visibility modifiers control access:
+      <br/>
+    | Modifier | Visibility |
+    |----------|------------|
+    | `+` | public (default) |
+    | `-` | private |
+    | `#` | protected |
+    | `~` | package |
+      <br/>
+    Example:
+      <br/>
+    ```lml
+    class Figure {
+      + radius        // public attribute
+      - filled        // private attribute
+      # length        // protected attribute
+    }
+    ```
+      <br/>
+    ### Attribute with Definition
+      <br/>
+    ```lml
+    class Figure {
+      attribute radius, Float {
+        definition {
+          Radius of the Figure
+        }
+      }
+    }
+    ```
+      <br/>
+    ## Enums
+      <br/>
+    An `enum` defines a named collection of values.
+      <br/>
+    ### Simple Enum
+      <br/>
+    ```lml
+    enum FiringProfile {
+      values { "low", "medium", "high" }
+    }
+    ```
+      <br/>
+    ### Enum with Definitions
+      <br/>
+    ```lml
+    enum GlazeTechnique {
+      definition "Techniques for glazing ceramics"
+      <br/>
+      value "Celadon" {
+        definition "Technique that creates glaze in a pale green color"
+      }
+      value "Raku" {
+        definition "Technique that creates a crackled glaze"
+      }
+      value "Majolica" {
+        definition "Technique that creates a white glaze"
+      }
+    }
+    ```
+      <br/>
+    ### Enum with Instance Values
+      <br/>
+    Enums can contain instances:
+      <br/>
+    ```lml
+    class GlazeType {
+      attribute name, String
+      attribute description, String
+    }
+      <br/>
+    enum GlazeTypes {
+      definition "Types of glaze finishes"
+      <br/>
+      value "matte" {
+        instance {
+          name = "matte"
+          definition = "Non-reflective finish"
+        }
+      }
+      value "gloss" {
+        instance {
+          name = "gloss"
+          definition = "Reflective finish"
+        }
+      }
+    }
+    ```
+      <br/>
+    ## Data Types
+      <br/>
+    ### Primitive Types
+      <br/>
+    Define primitives with the `primitive` keyword:
+      <br/>
+    ```lml
+    primitive Integer
+    primitive String
+    primitive Float
+    primitive Boolean
+    ```
+      <br/>
+    ### Data Type
+      <br/>
+    Define custom data types with `data_type`:
+      <br/>
+    ```lml
+    data_type "Banking Information" {
+      "art code"
+    }
+    ```
+      <br/>
+    ## Packages
+      <br/>
+    Organize classes and enums in packages:
+      <br/>
+    ```lml
+    package Ceramics {
+      enum FiringProfile {
+        values { "low", "medium", "high" }
+      }
+      <br/>
+      class CeramicTile {
+        attribute dimensions, Float { cardinality 2 }
+        attribute firing_profile, FiringProfile
+      }
+    }
+    ```
+      <br/>
+    ### Nested Packages
+      <br/>
+    ```lml
+    package Ceramics {
+      class Ceramic {
+        attribute volume, Float
+        attribute color, String
+      <br/>
+        // Reference to nested package
+        attribute tiles, Materials::CeramicTile { cardinality 0..n }
+      }
+      <br/>
+      package Materials {
+        enum FiringProfile {
+          values { "low", "medium", "high" }
+        }
+      <br/>
+        class CeramicTile {
+          attribute dimensions, Dimension
+          attribute firing_profile, FiringProfile
+        }
+      }
+    }
+    ```
+      <br/>
+    ## Complete Example
+      <br/>
+    ```lml
+    package Ceramics {
+      <br/>
+      enum FiringProfile {
+        value "low"
+        value "medium"
+        value "high"
+      }
+      <br/>
+      class Dimension {
+        attribute length, Float
+        attribute width, Float
+        attribute height, Float
+      }
+      <br/>
+      class CeramicTile {
+        definition {
+          A ceramic tile with specific dimensions and firing profile.
+        }
+      <br/>
+        attribute dimensions, Dimension
+        attribute firing_profile, FiringProfile {
+          definition "The temperature profile used for firing"
+        }
+      }
+      <br/>
+    }
+    ```
+  </article>
+</Base>

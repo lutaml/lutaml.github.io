@@ -1,0 +1,127 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+<Base title="code-comments — LutaML">
+  <article class="prose prose-lg dark:prose-invert mx-auto max-w-3xl px-6 py-12">
+    # Code Comments
+      <br/>
+    LutaML supports several types of comments for different purposes.
+      <br/>
+    ## Single-line Comments
+      <br/>
+    Use `//` for comments that are ignored by the parser:
+      <br/>
+    ```lml
+    // This is a comment
+    class Pet {}
+    ```
+      <br/>
+    Tail comments at the end of a line:
+      <br/>
+    ```lml
+    class Figure {
+      + radius        // Public attribute `radius`
+      - filled        // Private attribute `filled`
+      # length        // Protected attribute `length`
+    }
+    ```
+      <br/>
+    ## Multi-line Comments
+      <br/>
+    Use `/* */` for multi-line comments:
+      <br/>
+    ```lml
+    /* This is a
+       multi-line comment */
+      <br/>
+    /*
+      This is also a
+      multi-line comment
+    */
+    ```
+      <br/>
+    ## Definition Blocks
+      <br/>
+    The `definition` block creates documentation that is preserved with the model:
+      <br/>
+    ### Single-line Definition
+      <br/>
+    ```lml
+    definition "Non-reflective finish"
+    ```
+      <br/>
+    ### Multi-line Definition
+      <br/>
+    ```lml
+    definition {
+      Non-reflective finish.
+      <br/>
+      A matte finish is a non-reflective finish
+      that is often used in ceramics.
+    }
+    ```
+      <br/>
+    ### Definition in Classes
+      <br/>
+    ```lml
+    class Ceramic {
+      definition {
+        This class represents a ceramic object.
+      }
+    }
+    ```
+      <br/>
+    ### Definition in Attributes
+      <br/>
+    ```lml
+    class Figure {
+      attribute radius, Float {
+        definition {
+          Radius of the Figure in centimeters.
+        }
+      }
+    }
+    ```
+      <br/>
+    ### Definition in Enums
+      <br/>
+    ```lml
+    enum GlazeType {
+      value "matte" {
+        definition "Non-reflective finish"
+      }
+      value "gloss" {
+        definition "Reflective finish"
+      }
+    }
+    ```
+      <br/>
+    ## Comment Placement
+      <br/>
+    Comments can appear:
+      <br/>
+    - At the beginning of a line
+    - After whitespace
+    - At the end of a line (tail comment)
+      <br/>
+    ```lml
+    // TODO: implement <1>
+    class Ceramic {
+      // Write docs <2>
+      + glazeType: GlazeType // Glaze type <3>
+    }
+    ```
+      <br/>
+    1. A line beginning with `//` is a comment
+    2. A line beginning with whitespace followed by `//` is a comment
+    3. Text after `//` on a line is a tail comment
+      <br/>
+    ## Key Differences
+      <br/>
+    | Comment Type | Purpose | Preserved in Model |
+    |--------------|---------|-------------------|
+    | `//` | Developer notes | No |
+    | `/* */` | Multi-line developer notes | No |
+    | `definition` | Documentation | Yes |
+  </article>
+</Base>

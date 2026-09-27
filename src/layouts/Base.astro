@@ -1,0 +1,39 @@
+---
+interface Props { title: string; description?: string }
+const { title, description = "Universal data modeller" } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="theme-color" content="#1e40af" />
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100 antialiased">
+  <header class="sticky top-0 z-40 border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-950/80 backdrop-blur">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 h-14">
+      <a href="/" class="flex items-center gap-2 font-bold text-lg">
+        <img src="/lutaml-logo_logo-full-light.svg" alt="LutaML" class="h-6 light-only" />
+        <img src="/lutaml-logo_logo-full-dark.svg" alt="LutaML" class="h-6 dark-only hidden" />
+      </a>
+      <div class="flex items-center gap-6 text-sm">
+        <a href="/docs/simple-tutorial" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Introduction</a>
+        <a href="/docs/" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Documentation</a>
+        <a href="/blog/" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Blog</a>
+        <a href="/about" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">About</a>
+        <a href="https://github.com/lutaml" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">GitHub</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <slot />
+  </main>
+  <footer class="mt-24 border-t border-gray-200 dark:border-gray-800 py-8 text-center text-sm text-gray-500 dark:text-gray-400">
+    An open source project of <a href="https://www.ribose.com" class="underline">Ribose</a>
+  </footer>
+</body>
+</html>

@@ -1,16 +1,18 @@
 {
   "name": "lutaml.github.io",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "LutaML - Universal data modeller",
   "type": "module",
   "scripts": {
-    "dev": "vitepress dev",
-    "build": "vitepress build",
-    "preview": "vitepress preview"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
-  "devDependencies": {
-    "typescript": "^5.7.3",
-    "vitepress": "^1.6.4",
-    "vue": "^3.5.13"
+  "dependencies": {
+    "@astrojs/vue": "^7.0.0",
+    "astro": "^7.3.0",
+    "tailwindcss": "^4.3.0",
+    "@tailwindcss/vite": "^4.3.0",
+    "vue": "^3.5.0"
   }
 }

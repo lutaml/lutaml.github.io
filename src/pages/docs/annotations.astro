@@ -1,0 +1,116 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+<Base title="annotations — LutaML">
+  <article class="prose prose-lg dark:prose-invert mx-auto max-w-3xl px-6 py-12">
+    # Annotations
+      <br/>
+    Annotations in LutaML are provided through the `definition` construct, which allows you to add descriptive documentation to classes, attributes, enums, and values.
+      <br/>
+    ## Definition Block
+      <br/>
+    The `definition` block is used to add multiline descriptions to any construct.
+      <br/>
+    ### Class Definition
+      <br/>
+    ```lml
+    class Ceramic {
+      definition {
+        This class represents a ceramic object.
+        It can be used to model various types of ceramics
+        including pottery, tiles, and sculptures.
+      }
+    }
+    ```
+      <br/>
+    ### Attribute Definition
+      <br/>
+    ```lml
+    class AddressClassProfile {
+      definition {
+        This is a multiline definition
+        with `asciidoc` formatting support
+        and list items
+      }
+      +addressClassProfile: CharacterString { cardinality 0..1 }
+    }
+    ```
+      <br/>
+    ### Inline Attribute Definition
+      <br/>
+    ```lml
+    class AttributeProfile {
+      attribute imlicistAttributeProfile, CharacterString { cardinality 0..1 } {
+        definition {
+          This is an attribute definition
+          with multiple lines
+          end definition
+        }
+      }
+    }
+    ```
+      <br/>
+    ### Enum Value Definition
+      <br/>
+    ```lml
+    enum GlazeTechnique {
+      value "Celadon" {
+        definition "Technique that creates glaze in a pale green color"
+      }
+      value "Raku" {
+        definition "Technique that creates a crackled glaze"
+      }
+    }
+    ```
+      <br/>
+    ## Definition Syntax
+      <br/>
+    ### String Format
+      <br/>
+    For single-line definitions, use a string:
+      <br/>
+    ```lml
+    definition "Non-reflective finish"
+    ```
+      <br/>
+    ### Block Format
+      <br/>
+    For multiline definitions, use a block:
+      <br/>
+    ```lml
+    definition {
+      Non-reflective finish.
+      <br/>
+      A matte finish is a non-reflective finish that is often used in ceramics.
+    }
+    ```
+      <br/>
+    ## Using Definitions
+      <br/>
+    Definitions are used for:
+      <br/>
+    1. **Documentation** - Generate human-readable documentation
+    2. **Validation rules** - Describe constraints and requirements
+    3. **Code generation** - Create comments in generated code
+    4. **Schema documentation** - Annotate serialization schemas
+      <br/>
+    ## Example
+      <br/>
+    ```lml
+    class GlazeType {
+      definition {
+        Types of glaze finishes available for ceramic pieces.
+        Each type has different visual and textural characteristics.
+      }
+      <br/>
+      attribute name, String {
+        definition "The name of the glaze type"
+      }
+      <br/>
+      attribute description, String {
+        definition "A detailed description of the glaze characteristics"
+      }
+    }
+    ```
+  </article>
+</Base>
