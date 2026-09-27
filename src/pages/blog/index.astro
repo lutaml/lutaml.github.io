@@ -1,0 +1,31 @@
+---
+import Base from "../../layouts/Base.astro";
+
+const modules = import.meta.glob<{ frontmatter: Record<string, any> }>("./*.md", { eager: true });
+const posts = Object.entries(modules)
+  .map(([path, mod]) => ({
+    url: `/blog/${path.replace(/^\.\//, "").replace(/\.md$/, "")}/`,
+    frontmatter: mod.frontmatter,
+  }))
+  .filter((p) => p.frontmatter.title && p.frontmatter.date)
+  .sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
+---
+<Base title="Blog — LutaML">
+  <main class="mx-auto max-w-3xl px-6 py-12">
+    <h1 class="text-3xl font-bold mb-8">Blog</h1>
+    <div class="flex flex-col gap-6">
+      {posts.map((post) => (
+        <a href={post.url} class="rounded-xl border border-gray-200 dark:border-gray-800 p-6 hover:border-blue-600 dark:hover:border-blue-400 transition block">
+          <h2 class="text-xl font-semibold mb-1">{post.frontmatter.title}</h2>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">
+            {new Date(post.frontmatter.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
+            {post.frontmatter.authors?.length ? ` · ${post.frontmatter.authors.join(", ")}` : ""}
+          </p>
+          {post.frontmatter.description && (
+            <p class="text-gray-600 dark:text-gray-300">{post.frontmatter.description}</p>
+          )}
+        </a>
+      ))}
+    </div>
+  </main>
+</Base>
