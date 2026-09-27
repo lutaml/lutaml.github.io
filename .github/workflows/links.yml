@@ -39,12 +39,12 @@ jobs:
 
       - name: Check if site was built
         run: |
-          if [ ! -d ".vitepress/dist" ]; then
-            echo "Error: .vitepress/dist directory not created"
+          if [ ! -d "dist" ]; then
+            echo "Error: dist directory not created"
             exit 1
           fi
           echo "Site built successfully"
-          ls -la .vitepress/dist/
+          ls -la dist/
 
       - name: Link Checker
         uses: lycheeverse/lychee-action@v2
@@ -53,8 +53,8 @@ jobs:
             --verbose
             --no-progress
             --config lychee.toml
-            --root-dir ${{ github.workspace }}/.vitepress/dist
-            .vitepress/dist/**/*.html
+            --root-dir ${{ github.workspace }}/dist
+            dist/**/*.html
           fail: true
           output: link-check-results.md
           format: markdown
