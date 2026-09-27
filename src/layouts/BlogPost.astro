@@ -1,10 +1,14 @@
 ---
 import Base from "./Base.astro";
-interface Props { frontmatter: { title?: string } }
+import BlogByline from "../components/BlogByline.astro";
+interface Props {
+  frontmatter: { title?: string; authors?: string[]; date?: string };
+}
 const { frontmatter } = Astro.props;
 ---
 <Base title={frontmatter.title ? `${frontmatter.title} — LutaML` : "LutaML"}>
   <main class="mx-auto max-w-3xl px-6 py-12">
+    <BlogByline authors={frontmatter.authors} date={frontmatter.date} />
     <article class="prose prose-lg dark:prose-invert max-w-none">
       <slot />
     </article>

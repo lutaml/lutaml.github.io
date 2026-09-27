@@ -10,9 +10,10 @@
   },
   "dependencies": {
     "@astrojs/vue": "^7.0.0",
+    "@tailwindcss/typography": "^0.5.20",
+    "@tailwindcss/vite": "^4.3.0",
     "astro": "^7.3.0",
     "tailwindcss": "^4.3.0",
-    "@tailwindcss/vite": "^4.3.0",
     "vue": "^3.5.0"
   }
 }
