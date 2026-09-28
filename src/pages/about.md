@@ -165,8 +165,8 @@ LutaML is an open source project. All our repositories are available on GitHub u
 
 Ready to start modeling? Here's how:
 
-1. **Read the Tutorial** — Start with our [Simple Tutorial](/docs/simple-tutorial)
-2. **Explore the Docs** — Check out our [Documentation](/docs/simple-tutorial)
+1. **Read the Tutorial** — Start with our [Simple Tutorial](/guide/simple-tutorial)
+2. **Explore the Docs** — Check out our [Documentation](/guide/simple-tutorial)
 3. **View on GitHub** — Browse the [source code](https://github.com/lutaml)
 4. **Join the Community** — Star our repos and contribute!
 
