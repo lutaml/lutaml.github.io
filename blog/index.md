@@ -1,5 +1,0 @@
----
-outline: false
----
-
-<BlogIndex />
