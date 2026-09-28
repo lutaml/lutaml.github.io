@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/BlogPost.astro
 title: "LXR Package Build and SPA Site Generation"
 description: Build portable XSD schema packages with fully resolved types, then generate interactive Vue.js documentation sites.
 authors:
@@ -8,7 +9,6 @@ date: 2026-04-08
 
 # LXR Package Build and SPA Site Generation
 
-<BlogByline />
 
 With our latest release, lutaml-xsd now supports building **LXR packages** (LutaML XML Schema Repository) and generating **interactive SPA documentation** from XSD schemas. This post explains what LXR packages are, why they exist, and how they solve real problems when working with XSD schemas in practice.
 

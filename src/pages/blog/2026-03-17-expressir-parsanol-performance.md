@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/BlogPost.astro
 title: Expressir 2.2 - Faster EXPRESS Parsing with Parsanol
 description: Expressir now uses Parsanol, a Rust-based parser, for significantly faster EXPRESS schema parsing. Parse large schemas in seconds instead of minutes.
 authors:
@@ -8,7 +9,6 @@ date: 2026-03-17
 
 # Expressir 2.2 - Faster EXPRESS Parsing with Parsanol
 
-<BlogByline />
 
 We latest release of Expressir ("EXPRESS in Ruby") includes a major performance
 improvement: **integration with Parsanol**, a Rust-based parser generator.
