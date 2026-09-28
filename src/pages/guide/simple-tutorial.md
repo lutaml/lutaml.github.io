@@ -272,6 +272,6 @@ instances Tiles {
 
 ## Next Steps
 
-- Learn about [Annotations](/docs/annotations)
-- Explore [Associations](/docs/associations)
-- See [Class/Enum/Abstract Entities](/docs/class-enum-abstract-entities) for more details
+- Learn about [Annotations](/guide/annotations)
+- Explore [Associations](/guide/associations)
+- See [Class/Enum/Abstract Entities](/guide/class-enum-abstract-entities) for more details
